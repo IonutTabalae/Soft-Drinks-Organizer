@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>SoDrO Scholarly HTML Report</title>
+    <link rel="stylesheet" href="css/scholarly.min.css">
+    <script src="js/scholarly.min.js"></script>
+  </head>
+  <body prefix="schema: http://schema.org">
+    <header>
+      <div class="banner">
+        <img src="scholarly-html.svg" width="227" height="50" alt="Scholarly HTML logo">
+        <div class="status">SoDrO Project</div>
+      </div>
+      <h1>Soft Drinks Organizer</h1>
+    </header>
+    <div role="contentinfo">
+      <ol role="directory">
+        <li>
+          <a href="#descriere"><span>1. </span>Descrierea proiectului</a>
+        </li>
+        <li>
+          <a href="#tehnologii"><span>2. </span>Tehnologii utilizate</a>
+        </li>
+        <li>
+          <a href="#database"><span>3. </span>Sistemul de stocare al codului</a>
+        </li>
+        <li>
+          <a href="#functionalitati"><span>4. </span>Functionalitati ale aplicatiei</a>
+        </li>
+        <li>
+          <a href="#diagrame"><span>5. </span>Diagrame</a>
+          <ol role="directory">
+            <li>
+              <a href="#database_d"><span>5.1 </span>Diagrama bazei de date</a>
+            </li>
+            <li>
+              <a href="#usecase_d"><span>5.2 </span>Diagrame UseCase</a>
+            </li>
+            <li>
+              <a href="#arhitectura_d"><span>5.3 </span>Arhitectura aplicatiei</a>
+            </li>
+            <li>
+              <a href="#activitate_d"><span>5.4 </span>Diagrame de activitate</a>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <a href="#resurse"><span>6. </span>Resurse</a>
+        </li>
+      </ol>
+      <dl>
+        <dt>Authors</dt>
+        <dd>
+          <u>Tabalae Ioan-Sebastian</u>
+          &amp;
+          <u>Balteanu Andrei</u>
+          &amp;
+          <u>Iordache Alexandru</u> from group <b>A4</b>.
+        </dd>
+      </dl>
+    </div>
+    <section id="descriere" role="doc-introduction">
+      <h2><span>1. </span>Descrierea proiectului</h2>
+      <p>Aplicatie Web care realizeaza managementul preferintelor unei persoane in ceea de priveste consumul de bauturi non-alcoolice (ceaiuri, lactate, sucuri, siropuri, …).
+        Se va oferi suport si pentru gestiunea datelor aferente: categorie, pret, ingrediente, imagini, disponibilate in functie de regiune geografica.
+        Sistemul va oferi suport pentru activitati de realizare a listelor de cumparaturi, plus administrarea utilizatorilor.
+        Se vor genera statistici diverse ce pot fi exportate in formate deschise, CSV si SVG. Se va realiza, de asemenea, un clasament al celor mai populare produse, disponibil si ca flux de date RSS.
+        Pentru popularea bazei de date se va recurge la datele disponibile liber la Open Food Facts.</p>
+    </section>
+    <section id="tehnologii">
+      <h2><span>2. </span>Tehnologii utilizate</h2>
+      <p>
+        Pentru crearea interfetei utilizatorului, am folosit limbajele HTML si CSS.
+      </p>
+      <p>
+        Partea de back-end a interfetei va fi realizata cu ajutorul PHP.
+      </p>
+      <p>
+        Stocarea si managementul datelor va fi realizata utilizand un server de baze de date relational, SQLite.
+      </p>
+    </section>
+    <section id="database">
+      <h2><span>3. </span>Sistemul de stocare al codului</h2>
+      <p>Pentru stocarea și managementul online al codului-sursa; am folosit GitHub:</p>
+      <a href="https://github.com/IonutTabalae/Soft-Drinks-Organizer/">Repository-ul de pe GitHub</a>
+    </section>
+    <section id="functionalitati">
+      <h2><span>4. </span>Functionalitati ale aplicatiei</h2>
+      <ul>
+        <li>Posibilitatea utilizatorului de a-si creea cont, de a-si modifica detaliile contului, de a se conecta si deconecta. </li>
+        <li>Posibilitatea utilizatorului logat de a vizualiza produse, de a le adauga in lista de cumparaturi, de a vedea propria lista de cumparaturi si de
+          a scoate din lista de cumparaturi un produs.</li>
+        <li>Posibilitatea utilizatorului logat de a exporta/descarca detalii despre un anumit produs, despre lista sa de cumparaturi.</li>
+        <li>Existenta unui administrator care poate modifica baza de date prin adaugarea, stergerea si modificarea recomandarilor si sugestiilor.</li>
+        <li>Se va realiza un clasament al celor mai populare produse, bazat pe numarul de vizualizari/numaru de utilizatori care au adaugat acel produs in lista de cumparaturi.</li>
+      </ul>
+    </section>
+    <section id="diagrame">
+      <h2><span>5. </span>Diagrame</h2>
+      <section id="database_d">
+        <h3><span>5.1 </span>Diagrama bazei de date</h3>
+        <a href="https://dbdiagram.io/d/625543282514c97903159421">Link diagrama</a>
+        <img src="./diagrame/db.png" height=100% width=100%>
+      </section>
+      <section id="usecase_d">
+          <h3><span>5.2 </span>Diagrame UseCase</h3>
+          <img src="./diagrame/useCase.png" height=100% width=100%>
+      </section>
+      <section id="arhitectura_d">
+          <h3><span>5.3 </span>Arhitectura aplicatiei</h3>
+          <img src="./diagrame/arhitectura.png" height=100% width=100%>
+      </section>
+      <section id="activitate_d">
+          <h3><span>5.4 </span>Diagrame de activitate</h3>
+      </section>
+    </section>
+
+    <section id="resurse">
+      <h3>Resurse</h3>
+      <ul>
+        <li><a href="https://jigsaw.w3.org/css-validator/">CSS Validator</a></li>
+        <li><a href="https://validator.w3.org/">HTML Validator</a></li>
+        <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+        <li><a href="https://profs.info.uaic.ro/~busaco/teach/courses/web/web-film.html">Cursuri Tehnologii Web</a></li>
+        <li><a href="https://gordins.github.io/tw/laboratoare/">Laboratoare Tehnologii Web</a></li>
+        <li><a href ="https://www.figma.com/">Figma</a></li>
+      </ul>
+  </section>
+  <br><br><br>
+  </body>
+</html>
