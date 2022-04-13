@@ -15,6 +15,35 @@ body {
   padding: 0;
 }
 
+h1 {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 77px;
+  color: black;
+  padding: 40px;
+}
+
+h2 {
+  font-weight: 600;
+  color: black;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+.answer {
+  color: #00000099;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: left;
+}
+
+.question {
+  padding: 50px 0;
+}
+
 header button {
   font-family: 'Inter';
   font-weight: 600;
@@ -228,5 +257,13 @@ footer ul li {
 
   footer li a {
     font-size: 10px;
+  }
+
+  h1 {
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 60px;
+    color: black;
+    padding: 35px;
   }
 }
