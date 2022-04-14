@@ -13,7 +13,7 @@ body {
   color: #00000099;
   margin: 0;
   padding: 0;
- 
+
 }
 
 h1 {
@@ -33,23 +33,13 @@ h2 {
   padding-bottom: 20px;
 }
 
-.answer {
-  color: #00000099;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
-  text-align: left;
-}
 
-.question {
-  padding: 50px 0;
-}
-
-header button {
+header .login {
   font-family: 'Inter';
   font-weight: 600;
   font-size: 16px;
   text-decoration: none;
+  color: black;
   padding: 9px 25px;
   background-color: #E7F9FD;
   border: none;
@@ -58,8 +48,9 @@ header button {
   transition: all 1s ease 0s;
 }
 
-header button:hover {
+header .login:hover {
   background-color: lightblue;
+  color: black;
 }
 
 header {
@@ -134,14 +125,14 @@ footer li {
   justify-content: flex-end;
   align-items: center;
   padding: 20px 5%;
- 
+
 }
 
 footer {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   margin: 0px 5%;
   padding-top: 20px;
-  
+
 }
 
 footer ul {
@@ -183,6 +174,119 @@ footer ul li {
   color: #000000;
 }
 
+
+div.form-item {
+  margin: 20px;
+}
+
+.middle-container {
+  margin: 30px 5%;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: transparent;
+  box-shadow: 0 0 10px white;
+  border-radius: 15px;
+  width: 500px;
+  margin: 10vh auto;
+  padding-top:40px;
+
+}
+
+form {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+}
+
+.form-item {
+  display: flex;
+  width: 90%;
+  background: transparent;
+  margin: 10px auto;
+  border-radius: 15px;
+  align-items: center;
+  border-bottom: 1px solid rgb(82, 81, 81);
+}
+
+.form-item:hover {
+  border: 1px solid rgb(82, 81, 81);
+}
+
+input {
+  background: transparent;
+  width: 80%;
+  height: 30px;
+  outline: none;
+  border: none;
+  margin: auto;
+  color: black;
+  font-size: 17px;
+}
+
+.material-icons-outlined {
+  user-select: none;
+  margin: 5px;
+  color: rgb(172, 172, 172);
+  padding: 5px;
+  border-radius: 18px;
+}
+
+button[type=submit] {
+  width: 250px;
+  font-size: 22px;
+  margin: 10px auto;
+  padding: 8px;
+  background: rgb(122, 123, 116, 0.72);
+  border: none;
+  color: white;
+  border-radius: 15px;
+}
+
+button[type=submit]:hover {
+  background-color: #FF7426;
+
+}
+
+
+
+.options {
+  display: flex;
+  margin: 10px auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+button {
+  font-size: 18px;
+  padding: 5px 16px;
+  margin: 5px 15px;
+  width: 180px;
+  background: transparent;
+  color: Blue;
+  cursor: pointer;
+  transition: all 0.7s ease;
+}
+
+.create-account {
+  color: gray;
+}
+
+.create-account:hover {
+  color: black;
+}
+
+
+@media screen and (max-width:550px) {
+  .container {
+    width: 90%;
+  }
+
+}
+
 @media only screen and (max-width: 800px) {
   footer ul {
     text-align: center;
@@ -198,7 +302,7 @@ footer ul li {
     transition: all 1s ease 0s;
   }
 
-  header button {
+  header .login {
     font-size: 12px;
     padding: 5px 15px;
     background-color: #E7F9FD;
@@ -236,7 +340,7 @@ footer ul li {
     display: none;
   }
 
-  header button {
+  header .login {
     font-size: 10px;
     padding: 3px 10px;
     background-color: #E7F9FD;
@@ -267,131 +371,4 @@ footer ul li {
     color: black;
     padding: 35px;
   }
-}
-
-.middle-container {
-  margin: 20px 5%;
-  min-height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background: transparent;
-  box-shadow: 0 0 10px white;
-  border-radius: 15px;
-  width: 500px;
-  margin: 10vh auto;
-  padding-top:40px;
-  padding-bottom: 60px;
-}
-
-
-h2 {
-  font: size 30px;
-}
-
-form {
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  width: 85%;
-}
-
-.form-item {
-  display: flex;
-  width: 90%;
-  background: transparent;
-  margin: 10px auto;
-  border-radius: 15px;
-  align-items: center;
-  border-bottom: 1px solid rgb(82, 81, 81);
-}
-
-.form-item:hover {
-  border: 1px solid rgb(82, 81, 81);
-}
-
-input {
-  background: transparent;
-  width: 80%;
-  height: 30px;
-  outline: none;
-  border: none;
-  margin: auto;
-  color: black;
-  font-size: 17px;
-}
-
-span {
-  user-select: none;
-  margin: 5px;
-  color: rgb(172, 172, 172);
-  padding: 5px;
-  border-radius: 18px;
-}
-
-button[type=submit] {
-  width: 250px;
-  font-size: 22px;
-  margin: 10px auto;
-  padding: 8px;
-  background: rgb(122, 123, 116, 0.72);
-  border: none;
-  color: white;
-  border-radius: 15px;
-}
-
-button[type=submit]:hover {
-  background-color: #FF7426;
-
-}
-
-p:first-of-type {
-  font-size: 18px;
-  margin: 0;
-}
-
-.options {
-  display: flex;
-  margin: 10px auto;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-button {
-  font-size: 18px;
-  padding: 5px 16px;
-  margin: 5px 15px;
-  width: 180px;
-  background: transparent;
-  color: Blue;
-  cursor: pointer;
-  transition: all 0.7s ease;
-
-}
-
-
-
-p {
-  font-size: 18px;
-  margin: 5px;
-}
-
-a {
-  color: blue;
-}
-
-a:hover {
-  color: grey;
-}
-
-@media screen and (max-width:550px) {
-  .container {
-    width: 90%;
-  }
-
-}
-#login{
-  font-size: 64px;
-  padding-bottom: 30px;
 }
