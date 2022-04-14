@@ -3,6 +3,7 @@
   padding: 0;
 }
 
+
 body {
   font-family: 'Inter';
   font-style: normal;
@@ -20,7 +21,8 @@ h1 {
   font-size: 64px;
   line-height: 77px;
   color: black;
-  padding: 40px;
+  padding: 60px;
+  padding-top: 120px;
 }
 
 h2 {
@@ -30,6 +32,14 @@ h2 {
   line-height: 29px;
   text-align: left;
   padding-bottom: 20px;
+}
+
+img {
+  border-radius: 71px;
+  margin: 80px 0;
+  width: 70%;
+  height: auto;
+  transition: all 1s ease 0s;
 }
 
 .answer {
@@ -42,13 +52,17 @@ h2 {
 
 .question {
   padding: 50px 0;
+  width: 70%;
+  margin: auto;
+  transition: all 1s ease 0s;
 }
 
-header button {
+header .login {
   font-family: 'Inter';
   font-weight: 600;
   font-size: 16px;
   text-decoration: none;
+  color: black;
   padding: 9px 25px;
   background-color: #E7F9FD;
   border: none;
@@ -57,7 +71,7 @@ header button {
   transition: all 1s ease 0s;
 }
 
-header button:hover {
+header .login:hover {
   background-color: lightblue;
 }
 
@@ -184,6 +198,21 @@ footer ul li {
 }
 
 @media only screen and (max-width: 800px) {
+  img {
+    border-radius: 0;
+    margin: 50px 0;
+    width: 100%;
+    height: auto;
+    transition: all 1s ease 0s;
+  }
+
+  .question {
+    padding: 50px 0;
+    width: 100%;
+    margin: auto;
+    transition: all 1s ease 0s;
+  }
+
   footer ul {
     text-align: center;
   }
@@ -198,7 +227,7 @@ footer ul li {
     transition: all 1s ease 0s;
   }
 
-  header button {
+  header .login {
     font-size: 12px;
     padding: 5px 15px;
     background-color: #E7F9FD;
@@ -235,7 +264,7 @@ footer ul li {
     display: none;
   }
 
-  header button {
+  header .login {
     font-size: 10px;
     padding: 3px 10px;
     background-color: #E7F9FD;
