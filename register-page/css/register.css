@@ -267,7 +267,7 @@ footer ul li {
 }
 
 .middle-container {
-  margin: 10px 5%;
+  margin: 0px 5%;
   min-height: auto;
   display: flex;
   flex-direction: column;
@@ -276,20 +276,21 @@ footer ul li {
   background: transparent;
   box-shadow: 0 0 10px white;
   border-radius: 15px;
-  width: 700px;
+  width: 50%;
+  height: auto;
   margin: 7vh auto;
 }
 form {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  width: 85%;
+  width: 100%;
 }
 
 .form-item {
   display: flex;
   width: 70%;
-  height: 60px;
+  height: 30%;
   background: transparent;
   margin: 20px auto;
   border-radius: 15px;
@@ -308,11 +309,11 @@ input {
   margin: auto;
   color: black;
   font-size: 30px;
-  text-align: left;
+  
 }
 
 button[type=submit] {
-  width: 350px;
+  width: auto;
   font-size: 30px;
   margin: 10px auto;
   padding: 10px;
