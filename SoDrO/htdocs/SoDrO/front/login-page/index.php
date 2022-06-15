@@ -1,3 +1,7 @@
+<?php 
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -10,6 +14,8 @@
   <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/css?family=Inter" rel='stylesheet'>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="../../back/javascriptFiles/support.js"></script>
 </head>
 
 <body>
@@ -18,36 +24,59 @@
     <nav>
       <ul class="nav-links">
         <li><a href="#">Home</a></li>
-        <li><a href="../about-us-page/index.html">About</a></li>
-        <li><a href="../contact-us-page/index.html">Contact</a></li>
+        <li><a href="../about-us-page/index.php">About</a></li>
+        <li><a href="../contact-us-page/index.php">Contact</a></li>
       </ul>
     </nav>
-    <a class="login" href="">Login/Register</a>
+    <?php
+    
+    if(isset($_SESSION["userId"]) ){
+      echo "<a class='login' href='../../back/phpFiles/logout.php'>Log Out</a>";
+      echo "<a class='login' href='../profile-page/index.php'>Profile</a>";
+    }
+    else{
+      echo " <a class='login' href='../login-page/index.php'>Login/Register</a> ";
+    }
+    ?>
+    <!-- <a class="login" href="">Login/Register</a> -->
   </header>
 
   <div class="middle-container">
-    <h1 id="login" >Login</h1>
-    <form>
+    <h1 id="login">Login</h1>
+    <div class="messageAfterLogin" style="display:none"></div>
+    <form  method=POST action="../../back/phpFiles/login.php">
       <div class="form-item">
         <span class="material-icons-outlined">
           account_circle
         </span>
-        <input type="text" name="user" id="user" placeholder="Email or username...">
+        <input type="text" name="username" id="username" placeholder="Email or username...">
       </div>
       <div class="form-item">
         <span class="material-icons-outlined">
           lock
         </span>
-        <input type="password" name="password" id="pass" placeholder="Enter password...">
+        <input type="password" name="password" id="password" placeholder="Enter password...">
       </div>
-      <button type="submit">
+      <button type="submit" name="submitLogin" id="submitLogin" placeholder="Login">
         Login
       </button>
       <!--<p>Or login using</p>-->
-      <p>New user? <a class="create-account" href="../register-page/index.html">Create an account</a></p>
+      <p>New user? <a class="create-account" href="../register-page/index.php">Create an account</a></p>
     </form>
-    </div>
 
+    <?php
+      if(isset($_GET["error"])){
+        if($_GET["error"]=="IncorrectCredentias"){
+          echo '<script>', 'putMessageAfterLogin("Username/Email or password incorrect!");', '</script>';
+        }
+        if($_GET["error"]=="emptyFields"){
+          echo '<script>', 'putMessageAfterLogin("Please fill out the field to login!");', '</script>';
+        }
+      }
+      ?>
+      
+  </div>
+  <!-- <script src="/SoDrO/back/javascriptFiles/login.js"></script> -->
 
   <div class="bottom-container">
     <div>
