@@ -23,12 +23,26 @@ if ($_POST['username']!="" && $_POST['password'] != "") {
         if ($username1 == "admin" && $password1 == "admin") {
             session_start();
             $userId = $database->getUserByUsernameAndPassword($username1,$password1);
+            $userEmail = $database->getUserEmailByCredentials($username1,$password1);
+            $userUsername = $database->getUserUsernameByCredentials($username1,$password1);
+            $userFullname = $database->getFullnameByCredentials($username1,$password1);
             $_SESSION["userId"] = $userId;
+            $_SESSION["userEmail"] = $userEmail;
+            $_SESSION["userUsername"] = $userUsername;
+            $_SESSION["userFullname"] = $userFullname;
+            $_SESSION["userPw"] = $password1;
             header("location: http://localhost/SoDrO/front/contact-us-page/index.php");
         } else {
             session_start();
             $userId = $database->getUserByUsernameAndPassword($username1,$password1);
+            $userEmail = $database->getUserEmailByCredentials($username1,$password1);
+            $userUsername = $database->getUserUsernameByCredentials($username1,$password1);
+            $userFullname = $database->getFullnameByCredentials($username1,$password1);
             $_SESSION["userId"] = $userId;
+            $_SESSION["userEmail"] = $userEmail;
+            $_SESSION["userFullname"] = $userFullname;
+            $_SESSION["userUsername"] = $userUsername;
+            $_SESSION["userPw"] = $password1;
             header("location: http://localhost/SoDrO/front/about-us-page/index.php");
         }
     } 

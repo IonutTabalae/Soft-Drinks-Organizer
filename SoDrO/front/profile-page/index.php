@@ -64,15 +64,19 @@
           <input type="Submit" value="Update Personal Info">
           <div class="input-row">
             <p class="input-explanation">FULL NAME</p>
-            <input type="text" name="Full Name" placeholder="Enter your full name...">
+            <input type="text" name="Full Name" placeholder="<?php
+             echo $_SESSION['userFullname'];?>">
           </div>
           <div class="input-row">
             <p class="input-explanation">USERNAME</p>
-            <input type="text" name="username" placeholder="Enter new username...">
+            <input type="text" name="username" placeholder="<?php
+             echo $_SESSION['userUsername'];?>">
           </div>
           <div class="input-row">
             <p class="input-explanation">EMAIL</p>
-            <input type="email" name="email" placeholder="Enter new email...">
+            <input type="email" name="email" placeholder="<?php
+             echo $_SESSION['userEmail'];?>">
+             
           </div>
         </form>
 
