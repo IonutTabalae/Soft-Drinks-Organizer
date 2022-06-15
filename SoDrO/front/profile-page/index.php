@@ -60,21 +60,21 @@
 
       <div class="column">
         <h2>Personal Information</h2>
-        <form>
-          <input type="Submit" value="Update Personal Info">
+        <form method=POST action="../../back/phpFiles/updateProfile.php">
+          <input type="Submit" id="submitUpdateProfile" name="submitUpdateProfile" value="Update Personal Info">
           <div class="input-row">
             <p class="input-explanation">FULL NAME</p>
-            <input type="text" name="Full Name" placeholder="<?php
+            <input type="text" id="newFullname" name="newFullname" placeholder="<?php
              echo $_SESSION['userFullname'];?>">
           </div>
           <div class="input-row">
             <p class="input-explanation">USERNAME</p>
-            <input type="text" name="username" placeholder="<?php
+            <input type="text" name="newUsername" id="newUsername" placeholder="<?php
              echo $_SESSION['userUsername'];?>">
           </div>
           <div class="input-row">
             <p class="input-explanation">EMAIL</p>
-            <input type="email" name="email" placeholder="<?php
+            <input type="email" name="newEmail" id = "newEmail" placeholder="<?php
              echo $_SESSION['userEmail'];?>">
              
           </div>

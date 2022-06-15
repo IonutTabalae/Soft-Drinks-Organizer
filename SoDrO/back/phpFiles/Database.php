@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 class Database
 {
 
@@ -103,5 +103,17 @@ class Database
              echo("i m here2121");
             return null;
         }
+    }
+
+    public function updateProfile($fullname,$email,$username){
+        $this->conn = null;
+        $conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
+
+        $query = "update users set fullname =  '" . $fullname . "', email = '" . $email . "' , username = '" . $username . "' where users.id = '" . $_SESSION["userId"] . "'" ;
+         mysqli_query($conn, $query);
+         $result = mysqli_affected_rows($conn);
+         return $result;
+        
+        
     }
 }
