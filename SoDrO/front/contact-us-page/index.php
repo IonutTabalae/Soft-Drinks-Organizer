@@ -58,7 +58,7 @@ session_start();
                 <input type="Submit" value="Submit" name = "Submit">
             </div>
         </form>
-        
+
                 <div class=" news-frame">
                 <div class="news-info">
                     <h1>Weekly drink to your inbox</h1>
@@ -72,24 +72,7 @@ session_start();
                 </div>
             </div>
     </div>
-    <div class="bottom-container">
-        <div>
-            <p class="logo">Soft<span style="color:#FF7426">Drinks</span>Organizer<span style="color:#FF7426">.</span>
-            </p>
-            <p class="logo-description">Best place to find the drinks you want.</p>
-        </div>
-        <ul class="bottom-links">
-            <li><a href="#top">Contact</a></li>
-            <li><a href="../about-us-page/index.html">About Us</a></li>
-        </ul>
-    </div>
-    <footer>
-        <ul>
-            <li><a href="https://www.instagram.com/">Instagram</a></li>
-            <li><a href="https://www.facebook.com/">Facebook</a></li>
-        </ul>
-        <a class="copyright">© 2022 Soft Drinks Organizer(SoDrO)</a>
-    </footer>
+    <?php include '../assets/footer.php' ?>
 </body>
 
 </html>

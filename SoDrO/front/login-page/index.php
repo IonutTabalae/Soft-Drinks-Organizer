@@ -1,4 +1,4 @@
-<?php 
+<?php
 	session_start();
 ?>
 
@@ -29,7 +29,7 @@
       </ul>
     </nav>
     <?php
-    
+
     if(isset($_SESSION["userId"]) ){
       echo "<a class='login' href='../../back/phpFiles/logout.php'>Log Out</a>";
       echo "<a class='login' href='../profile-page/index.php'>Profile</a>";
@@ -74,27 +74,11 @@
         }
       }
       ?>
-      
+
   </div>
   <!-- <script src="/SoDrO/back/javascriptFiles/login.js"></script> -->
 
-  <div class="bottom-container">
-    <div>
-      <p class="logo">Soft<span style="color:#FF7426">Drinks</span>Organizer<span style="color:#FF7426">.</span></p>
-      <p class="logo-description">Best place to find the drinks you want.</p>
-    </div>
-    <ul class="bottom-links">
-      <li><a href="../contact-us-page/index.html">Contact</a></li>
-      <li><a href="../about-us-page/index.html">About Us</a></li>
-    </ul>
-  </div>
-  <footer>
-    <ul>
-      <li><a href="https://www.instagram.com/">Instagram</a></li>
-      <li><a href="https://www.facebook.com/">Facebook</a></li>
-    </ul>
-    <a class="copyright">© 2022 Soft Drinks Organizer(SoDrO)</a>
-  </footer>
+  <?php include '../assets/footer.php' ?>
 </body>
 
 </html>

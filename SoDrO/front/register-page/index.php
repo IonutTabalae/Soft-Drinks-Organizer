@@ -1,4 +1,4 @@
-<?php 
+<?php
 	session_start();
 ?>
 <!DOCTYPE html>
@@ -62,24 +62,9 @@
     <p>Already have an account?<a class="login-account" href="../login-page/index.php">Login now!</a></p>
     </form>
 </div>
-  <script src="/SoDrO/back/javascriptFiles/createAcc.js"></script>
-  <div class="bottom-container">
-    <div>
-      <p class="logo">Soft<span style="color:#FF7426">Drinks</span>Organizer<span style="color:#FF7426">.</span></p>
-      <p class="logo-description">Best place to find the drinks you want.</p>
-    </div>
-    <ul class="bottom-links">
-      <li><a href="../contact-us-page/index.html">Contact</a></li>
-      <li><a href="../about-us-page/index.html">About Us</a></li>
-    </ul>
-  </div>
-  <footer>
-    <ul>
-      <li><a href="https://www.instagram.com/">Instagram</a></li>
-      <li><a href="https://www.facebook.com/">Facebook</a></li>
-    </ul>
-    <a class="copyright">© 2022 Soft Drinks Organizer(SoDrO)</a>
-  </footer>
+
+	<script src="/SoDrO/back/javascriptFiles/createAcc.js"></script>
+  <?php include '../assets/footer.php' ?>
 </body>
 
 </html>
