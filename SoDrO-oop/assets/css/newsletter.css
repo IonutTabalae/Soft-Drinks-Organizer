@@ -1,0 +1,98 @@
+
+.container-news {
+
+    background: linear-gradient(125deg, #FF7426, lightblue);
+    padding: 60px;
+    margin: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    text-align: center;
+    color: #00000099;
+
+}
+
+.container-news h2.title {
+    color: #FFF;
+    text-align: center;
+    font-size: 3rem;
+
+    font-weight: 800;
+}
+
+.container-news p {
+    color: #FFF;
+    font-size: .9rem;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.container-news form .inputBox {
+    width: 100%;
+    height: 70px;
+    background: #574b9060;
+    border-radius: 50px;
+    position: relative;
+}
+
+.container-news form .inputBox input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(100% - 50px);
+    height: 100%;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0 20px;
+    font-size: 1rem;
+    color: #f1f1f1;
+}
+
+.container-news form .inputBox input::placeholder {
+    color: #f1f1f1;
+}
+
+.container-news form .inputBox button.btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background: #574b90;
+    color: #FFF;
+    cursor: pointer;
+    animation: animate 3s infinite;
+}
+
+@keyframes animate {
+    0%, 100% {
+        box-shadow: none;
+    }
+    50% {
+        box-shadow: 0 0 0 5px #574b9060,
+                    0 0 0 10px #574b9030;
+    }
+}
+
+.container-news form .inputBox button.btn:hover {
+    animation: none;
+}
+
+@media only screen and (max-width: 550px) {
+  .container-news h2.title {
+      color: #FFF;
+      text-align: center;
+      font-size: 2.2rem;
+    
+      font-weight: 800;
+  }
+}

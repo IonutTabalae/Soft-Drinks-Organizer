@@ -13,7 +13,7 @@ class Login extends Database {
 
     if ($stmt->rowCount() == 0) {
       $stmt = null;
-      header("location: ../login.php?error=usernotfound12");
+      header("location: ../login.php?error=usernotfound");
       exit();
     }
 
@@ -27,8 +27,8 @@ class Login extends Database {
     }
     elseif ($checkPassword == true) {
       $stmt = $this->connect()->prepare('SELECT * FROM users WHERE username = ? OR email = ? AND password = ?;');
-      
-      if (!$stmt->execute(array($username, $username, $password))) {
+
+      if (!$stmt->execute(array($username, $username, $passwordHashed[0]["password"]))) {
         $stmt = null;
         header("location: ../login.php?error=stmtfailed");
         exit();
@@ -36,7 +36,7 @@ class Login extends Database {
 
       if ($stmt->rowCount() == 0) {
         $stmt = null;
-        header("location: ../login.php?error=usernotfound21");
+        header("location: ../login.php?error=usernotfound");
         exit();
       }
 
@@ -48,6 +48,7 @@ class Login extends Database {
       $_SESSION["fullname"]    = $user[0]["fullname"];
       $_SESSION["email"]       = $user[0]["email"];
       $_SESSION["description"] = $user[0]["description"];
+      $_SESSION["image"]       = $user[0]["image"];
      }
 
     $stmt = null;

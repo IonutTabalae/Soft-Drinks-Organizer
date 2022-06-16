@@ -44,20 +44,9 @@
             </div>
                 <input type="Submit" value="Submit" name = "Submit">
           </form>
-        </div>
-                <div class=" news-frame">
-                <div class="news-info">
-                    <h1>Weekly drink to your inbox</h1>
-                    <p>Find out all the news about drinks now!</p>
-                    <form>
-                        <div class="input-row">
-                            <input type="text" name="email" placeholder="Your email adress..." required>
-                            <input type="Submit" value="Subscribe">
-                        </div>
-                    </form>
-                </div>
-            </div>
-    </div>
+        
+    <link rel="stylesheet" href="./assets/css/newsletter.css">
+    <?php include "./assets/newsletter.php" ?>
     <?php include "./assets/footer.php" ?>
 </body>
 

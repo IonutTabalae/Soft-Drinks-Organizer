@@ -22,7 +22,7 @@
     <div class="row">
       <div class="column">
         <div class="profile-pic-div">
-          <img src="images/basic-profile-picture.jpg" alt="profile-picture">
+          <img src="images/<?php echo "{$_SESSION['image']}"; ?>" alt="profile-picture">
           <label class="custom-photo-upload">
             <input type="file" name="profile-pic" accept="image/*" />Change Profile Picture</label>
         </div>
@@ -31,10 +31,10 @@
           <h3>Description</h3>
           <form method=POST action="./includes/profileDescription.inc.php">
             <div class="input-row">
-            <input type="text" name="newDescription" placeholder=
+            <input class="description" type="text" name="newDescription" placeholder=
             "<?php echo $_SESSION["description"]; ?>">
-            <input type="Submit" name="submitDescription" id="submitDescription" value="Update description" >
             </div>
+            <input type="Submit" name="submitDescription" id="submitDescription" value="Update description" >
           </form>
         </div>
       </div>
@@ -59,7 +59,7 @@
                                                           echo $_SESSION["email"]; ?>">
           </div>
         </form>
-        
+
         <form method=POST action="./includes/userPassword.inc.php">
           <div class="messageAfterUpdatePassword"   style="display:none"></div>
           <input type="Submit" name ="changePassword" id = "changePassword"value="Change Password">
@@ -84,7 +84,7 @@
         if($_GET["error"]=="passwordDontMatch"){
           echo '<script>', 'putMessageAfterChangePassword("Password not matching!");', '</script>';
         }
-        
+
       }
       ?>
   </div>
