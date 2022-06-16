@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 175%;
+  text-align: center;
+  color: #00000099;
+  margin: 0;
+  padding: 0;
+
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 77px;
+  color: black;
+  padding: 40px;
+}
+
+h2 {
+  font-weight: 600;
+  color: black;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+.logo {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+}
+
+
+div.form-item {
+  margin: 20px;
+}
+
+.middle-container {
+  margin: 30px 5%;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: transparent;
+  box-shadow: 0 0 10px white;
+  border-radius: 15px;
+  width: 500px;
+  margin: 10vh auto;
+  padding-top:40px;
+
+}
+
+form {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+}
+
+.form-item {
+  display: flex;
+  width: 90%;
+  background: transparent;
+  margin: 10px auto;
+  border-radius: 15px;
+  align-items: center;
+  border-bottom: 1px solid rgb(82, 81, 81);
+}
+
+.form-item:hover {
+  border: 1px solid rgb(82, 81, 81);
+}
+
+input {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 175%;
+  background: transparent;
+  width: 80%;
+  height: 30px;
+  outline: none;
+  border: none;
+  margin: auto;
+  color: black;
+  font-size: 16px;
+}
+
+.material-icons-outlined {
+  user-select: none;
+  margin: 5px;
+  color: rgb(172, 172, 172);
+  padding: 5px;
+  border-radius: 18px;
+}
+
+button[type=submit] {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  width: 250px;
+  font-size: 22px;
+  margin: 10px auto;
+  padding: 8px;
+  background: rgb(122, 123, 116, 0.72);
+  border: none;
+  color: white;
+  border-radius: 15px;
+}
+
+button[type=submit]:hover {
+  background-color: #FF7426;
+
+}
+
+.options {
+  display: flex;
+  margin: 10px auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+button {
+  font-size: 18px;
+  padding: 5px 16px;
+  margin: 5px 15px;
+  width: 180px;
+  background: transparent;
+  color: Blue;
+  cursor: pointer;
+  transition: all 0.7s ease;
+}
+
+.create-account {
+  color: gray;
+}
+
+.create-account:hover {
+  color: black;
+}
+
+
+@media screen and (max-width:550px) {
+  .container {
+    width: 90%;
+  }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+}
+
+@media only screen and (max-width: 600px) {
+
+}
+
+@media only screen and (max-width: 330px) {
+  .container {
+    width: 60%;
+  }
+
+  h1 {
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 60px;
+    color: black;
+    padding: 35px;
+  }
+}
