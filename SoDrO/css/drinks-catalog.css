@@ -10,10 +10,13 @@ body {
   font-size: 16px;
   line-height: 175%;
   text-align: center;
-  color: #00000099;
   margin: 0;
   padding: 0;
 
+}
+
+.middle-container {
+  margin: 0 5%;
 }
 
 h1 {
@@ -22,4 +25,39 @@ h1 {
   line-height: 77px;
   color: black;
   padding: 40px;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 30px;
+  color: black;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.product-card {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  border-radius: 33px;
+  float: left;
+  width: 100%;
+  background-color: #f9feff;
+}
+
+.product-card p, .product-card h2 {
+  text-align: left;
+  padding-right: 10%;
+}
+
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+img {
+  border-radius: 59px;
+  max-width: 218px;
+  max-height: 350px;
+  padding: 50px 20px;
 }
