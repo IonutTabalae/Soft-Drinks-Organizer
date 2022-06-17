@@ -15,3 +15,9 @@ function putMessageAfterChangePassword(msg){
   $(".messageAfterUpdatePassword").css("display", "block");
   $(".messageAfterUpdatePassword").css("color", "red");
 }
+
+function putMessageAfterNewsletter(msg) {
+  $(".MessageAfterNewsletter").html("<b>" + msg + "</b>");
+  $(".MessageAfterNewsletter").css("display", "block");
+  $(".MessageAfterNewsletter").css("color", "red");
+}

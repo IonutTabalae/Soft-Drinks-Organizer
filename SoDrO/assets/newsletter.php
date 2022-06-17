@@ -7,4 +7,17 @@
 				<button type="submit" name="submitNewsletter" class="btn" style="font-size: 22px;">></button>
 			</div>
 		</form>
+		<div class = "MessageAfterNewsletter"></div>
+		<?php
+      if(isset($_GET["error"])){
+				if($_GET["error"]=="none"){
+					echo '<script>', 'putMessageAfterNewsletter("Subscribed to newsletter successfully!");', '</script>';
+			}
+			if(isset($_GET["error"])){
+				if($_GET["error"]=="alreadyExists"){
+					echo '<script>', 'putMessageAfterNewsletter("Email already subscribed!");', '</script>';
+			}
+		}
+	}
+		?>
 </div>

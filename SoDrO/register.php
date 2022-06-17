@@ -63,6 +63,9 @@
         if($_GET["error"]=="passwordtooshort"){
           echo '<script>', 'putMessageAfterRegister("Password must be at least 6 characters!");', '</script>';
         }
+        if($_GET["error"]=="none"){
+          echo '<script>', 'putMessageAfterRegister("Account created succesfully!");', '</script>';
+        }
       }
       ?>
 </div>

@@ -12,6 +12,7 @@
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Inter" rel='stylesheet'>
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="./javascriptFiles/support.js"></script>
 </head>
 
 <body>
