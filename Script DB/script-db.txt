@@ -1,11 +1,16 @@
+DROP TABLE newsletter;
+DROP TABLE categories;
+DROP TABLE users;
+DROP TABLE products;
+
 CREATE TABLE newsletter (
     	id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    	email varchar(100) NOT NULL UNIQUE
+    	email varchar(100) NOT NULL UNIQUE DEFAULT
 );
 
 CREATE TABLE users (
 	id int(100) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-	TYPE varchar(6) NOT NULL DEFAULT 'user,
+	TYPE varchar(6) NOT NULL DEFAULT 'user',
 	username TINYTEXT NOT NULL UNIQUE,
 	email TYNYTEXT NOT NULL UNIQUE,
 	password LONGTEXT NOT NULL,
@@ -34,4 +39,4 @@ CREATE TABLE categories (
   	name varchar(100)
 );
 
-ALTER TABLE products ADD FOREIGN KEY (category_id) REFERENCES categorie (id);	
+ALTER TABLE products ADD FOREIGN KEY (category_id) REFERENCES categories (id);	
