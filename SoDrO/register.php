@@ -66,7 +66,7 @@
       }
       ?>
 </div>
-  
+
   <?php include "./assets/footer.php" ?>
 </body>
 
