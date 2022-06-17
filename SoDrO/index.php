@@ -14,15 +14,6 @@
   <body>
     <?php include "./assets/header.php" ?>
     <h1>Homepage</h1>
-    <p>
-    <?php
-    include "./classes/product.classes.php";
-    $product      = new Product();
-    $listProducts = $product->getAllProducts();
-    
-    echo($listProducts);
-    ?>
-    </p>
     <?php include "./assets/footer.php" ?>
   </body>
 </html>
