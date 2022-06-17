@@ -19,7 +19,7 @@
       <h1>Starbucks Cappuccino - 220 ml</h1><!--TODO de pus numele produsului + size-->
       <div class="row">
         <div class="column">
-          <img src="images\products\starbucks-220ml.png" alt="product-image"><!--TODO de inlocuit imaginea cu imaginea produsului specific-->
+          <img src="images\products\1.png" alt="product-image">
                 <p>Categories: Beverages, Dairies, Dairy drinks, Flavoured milks, Chocolate milks</p> <!--TODO de inlocuit cu categoria specifica-->
         </div>
         <div class="column">
