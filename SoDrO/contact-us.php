@@ -46,8 +46,9 @@
                 <input type="Submit" value="Submit" name = "Submit">
           </form>
 
-    <link rel="stylesheet" href="./assets/css/newsletter.css">
-    <?php include "./assets/newsletter.php" ?>
+          <link rel="stylesheet" href="./assets/css/newsletter.css">
+          <?php include "./assets/newsletter.php" ?>
+    </div>
     <?php include "./assets/footer.php" ?>
 </body>
 

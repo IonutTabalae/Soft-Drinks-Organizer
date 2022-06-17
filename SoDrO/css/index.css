@@ -1,20 +1,40 @@
 body {
   font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 175%;
-  text-align: center;
-  color: #00000099;
-  margin: 0;
-  padding: 0;
+
 }
 
 h1 {
   font-weight: 600;
   font-size: 64px;
   line-height: 77px;
+  text-align: center;
   color: black;
   padding: 60px;
   padding-top: 120px;
+}
+
+.rss h2 {
+  margin-bottom: 30px;
+  animation-name: fresh-news;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fresh-news {
+  0% {color: #FF7426;}
+  33% {color: #26a1ff;}
+  66% {color: #50C878;}
+  90% {color: #ffe226;}
+  100% {color: #FF7426;}
+}
+
+.middle-container {
+  margin: 0 5%;
+}
+
+.rss {
+  background-color: #E7FAFE;
+  padding: 50px;
+  border-radius: 80px;
+
 }
