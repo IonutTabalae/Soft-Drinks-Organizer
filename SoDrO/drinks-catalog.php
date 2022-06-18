@@ -16,18 +16,37 @@
   <body>
     <?php require("database_con.php");?>
     <?php
-      $sql = 'SELECT * FROM products ORDER BY id DESC';
-      $result = mysqli_query($conn, $sql);
-      $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
-      shuffle($products);
-     ?>
+      if(isset($_GET['search'])) {
+        /*pentru a lua doar primele 400 caractere din descriere*/
+        $sql = "SELECT id, name, size, brand, category, LEFT (ingredients, 400) AS ingredients, allergens, calories, fat, carbs, sugar, fiber, protein, salt,
+        food_group, nutrigrade, link FROM products WHERE lower(name) LIKE '%" .$_GET['search'] . "%'";
 
+        $result = mysqli_query($conn, $sql);
+        $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
+      }
+      else {
+
+        $sql = 'SELECT id, name, size, brand, category, LEFT (ingredients, 400) AS ingredients, allergens, calories, fat, carbs, sugar, fiber protein, salt,
+        food_group, nutrigrade, link FROM products ORDER BY id DESC';
+
+        $result = mysqli_query($conn, $sql);
+        $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        shuffle($products);
+      }
+     ?>
 
     <?php include "./assets/header.php" ?>
     <div class="middle-container">
     <h1>Drinks Catalog</h1>
+    <div class="search-bar">
+      <form class="search-bar" action="drinks-catalog.php" method="GET">
+        <input type="text" name="search" placeholder="Search...">
+        <button type="submit"  class="btn" >⌕</button>
+      </form>
+    </div>
     <?php if(empty($products)): ?>
-      <p class="idk momentan">There are no products in db.</p>
+      <h2 class="idk momentan" style="color: #FF7426; margin-top: 100px;">no such drink yet...</h2>
+      <a href="contact-us.php#newsletterHref"<p style="color: #FF7426; margin-bottom: 100px;">You can still subscribe to our newsletter to get the latest news about our page.</p></a>
     <?php endif; ?>
 
     <?php foreach($products as $item): ?>
@@ -39,7 +58,9 @@
         <div class="column">
           <h2><?php echo $item['name'] . ' - ' . $item['size']; ?></h2>
           <p><?php echo $item['ingredients'] ?></p>
-          <!--TODO Mai modific design ul umpic si vad ce mai adaug-->
+          <p style="font-style: italic;">Brand: <?php if($item['brand']=='') echo "-"; else echo $item['brand']; ?></p>
+          <p style="font-style: italic; text-align: center;">Allergens: <?php if($item['allergens']=='') echo "-"; else echo $item['allergens']; ?></p>
+          <img src="images/nutriscore/<?php if($item['nutrigrade']=='') echo 'non'; else echo $item['nutrigrade']; ?>.svg" alt="">
         </div>
       </div>
       </a>

@@ -1,4 +1,4 @@
-<div class="container-news">
+<div class="container-news" id="newsletterHref">
 		<h2 class="title">Newsletter</h2>
 		<p>Subscribe to our newsletter for fresh news about us!</p>
 		<form action="./includes/newsletter.inc.php" method="POST">

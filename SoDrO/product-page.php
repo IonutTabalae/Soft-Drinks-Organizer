@@ -23,7 +23,7 @@
           $sql         = 'SELECT * FROM products where products.id = ' .$productId;
           $result      = mysqli_query($conn, $sql);
           $product     = $result->fetch_assoc();
-          
+
           $sql         = 'update products set views = views + 1 where id = '.$productId;
           $result1     = mysqli_query($conn,$sql);
         }
@@ -36,7 +36,7 @@
       <div class="row">
         <div class="column">
           <img src="images\products\<?php echo $product["id"] ?>.png" alt="drink-image">
-                <p>Categories: <?php echo $product["category"] ?>, <?php echo $product["food_group"] ?></p> <!--TODO de inlocuit cu categoria specifica-->
+                <p>Categories: <?php echo $product["category"] ?>, <?php echo $product["food_group"] ?></p>
         </div>
         <div class="column">
           <div class="nutrition-div">
@@ -58,8 +58,12 @@
       <div class="content">
         <h2>Ingredients:</h2>
         <p><?php echo $product["ingredients"] ?></p>
-
       </div>
+      <?php if($product["allergens"]!="") { ?>
+        <div class="content">
+          <p style="font-style: italic;">Allergens: <?php echo $product["allergens"] ?></p>
+        </div>
+      <?php } ?>
       <?php if($product["countries"]!="") { ?>
         <div class="content">
           <h2>Countries where sold:</h2>
@@ -86,8 +90,8 @@
         <div class="content">
           <img src="images/nutriscore/<?php echo $product["nutrigrade"] ?>.svg" alt="nutriscore-non">
         </div>
+        <?php } ?>
     </div>
-      <?php } ?>
     <?php include "./assets/footer.php" ?>
   </body>
 </html>

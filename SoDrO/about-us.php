@@ -33,9 +33,8 @@
 
     <div class="question">
       <h2>Who is the team?</h2>
-      <p class="answer">We are three students in second year working for a project at Web Technology. Our name is
-        Tabalae Ioan-Sebastian, Balteanu Andrei and Iordache Alexandru. We are new to web development but we hope this
-        website achieves his initial purpose. </p>
+      <p class="answer">We are two students in second year working for a project at Web Technology. We are
+        Tabalae Ioan-Sebastian and Balteanu Andrei. We worked hard to achieve this result and we hope you enjoy using it as much as we enjoyed creating it. </p>
     </div>
 
   </div>

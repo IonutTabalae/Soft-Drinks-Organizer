@@ -3,10 +3,53 @@ body {
 
 }
 
+.recomandate {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: wrap;
+}
+
+.product img {
+  max-width: 450px;
+  max-height: 500px;
+  border-radius: 50px;
+}
+
+.product {
+  background: #E7FAFE;
+  border-radius: 20px;
+  margin: 20px;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+#tag {
+  padding: 5px;
+  background: orange;
+  float: left;
+  border-radius: 20px;
+  display: flex;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.column {
+  float: left;
+  width: 400px;
+  margin: 20px;
+  padding: 1% 25px;
+  text-align: center;
+}
+
+
 h1 {
   font-weight: 600;
-  font-size: 64px;
-  line-height: 77px;
+  font-size: 60px;
+  line-height: 66px;
   text-align: center;
   color: black;
   padding: 60px;
@@ -36,5 +79,26 @@ h1 {
   background-color: #E7FAFE;
   padding: 50px;
   border-radius: 80px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
 
+.column p:not(#tag) {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 1151px) {
+  .column {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .product img {
+    max-width: 300px;
+    max-height: 380px;
+  }
 }
