@@ -3,10 +3,10 @@
     padding: 0;
 }
 
-img {
-  border-radius: 119px;
-  width: 437px;
-  height: 470px;
+.column img {
+  border-radius: 100px;
+  max-width: 450px;
+  max-height: 520px;
   padding: 40px;
   transition: all 1s ease 0s;
 }
@@ -152,10 +152,10 @@ button[name="addToCart"] {
 }
 
 @media only screen and (max-width: 600px) {
-  img {
+  .column img {
     transition: all 1s ease 0s;
     border-radius: 90px;
-    width: 336px;
-    height: 361px;
+    max-width: 350px;
+    max-height: 400px;
   }
 }

@@ -14,7 +14,7 @@
     <title></title>
   </head>
   <body>
-<?php
+    <?php
       if(isset($_GET["id"])){
         if($_GET["id"]!=""){
           $productId = $_GET["id"];
@@ -22,48 +22,30 @@
           require("database_con.php");
           $sql         = 'SELECT * FROM products where products.id = ' .$productId;
           $result      = mysqli_query($conn, $sql);
-          $infoProduct = $result->fetch_assoc();
-
-
-          $sql1         = 'SELECT name from categories where categories.id = '               .$infoProduct["category_id"];
-          $result1      = mysqli_query($conn,$sql1);
-          $categoryName = $result1->fetch_assoc();
-          
+          $product = $result->fetch_assoc();
         }
       }
-?>
-  
+    ?>
+
     <?php include "./assets/header.php" ?>
     <div class="middle-container">
-      <h1>
-        <?php echo $infoProduct['name'] . ' - ' . $infoProduct['size']; ?>
-      </h1>
+      <h1><?php echo $product['name'] ?> - <?php echo $product['size'] ?></h1>
       <div class="row">
         <div class="column">
-          <img src="images/products/<?php echo $infoProduct['id'] ?>.png">
-                <p>
-                  Categories: <?php echo $categoryName["name"];  ?>
-                 </p> 
+          <img src="images\products\<?php echo $product["id"] ?>.png" alt="drink-image">
+                <p>Categories: <?php echo $product["category"] ?>, <?php echo $product["food_group"] ?></p> <!--TODO de inlocuit cu categoria specifica-->
         </div>
         <div class="column">
           <div class="nutrition-div">
             <h2>Nutrition Information</h2>
-            <p>
-              <?php echo 'Calories' . " ". $infoProduct['calories'] . 'kcal' ?>
-            </p> <!--bold-->
-            <p>
-              <?php echo 'Fat' . " ". $infoProduct['fat'] . 'g' ?>
-            </p> <!--bold-->
-            <p>
-              <?php echo 'Carbohydrate' . " ". $infoProduct['carbs'] . 'g' ?>
-            </p> <!--bold-->
-            <p>
-               <?php echo 'Fiber' . " ". $infoProduct['fiber'] . 'g' ?>
-            </p> <!--bold-->
-            <p>
-               <?php echo 'Salt' . " ". $infoProduct['salt'] . 'g' ?>
-            </p> <!--bold-->
-            <!--TODO loc pentru mesaj de : Product successfully added to your shopping list!-->
+            <p>Calories <?php echo $product["calories"] ?>kcal</p>
+            <p>Fat <?php echo $product["fat"] ?>g</p>
+            <p>Carbohydrate <?php echo $product["carbs"] ?>g</p>
+            <p>Fiber <?php echo $product["fiber"] ?>g</p>
+            <p>Sugar <?php echo $product["sugar"] ?>g</p>
+            <p>Salt <?php echo $product["salt"] ?>g</p>
+            <p>Protein <?php echo $product["protein"] ?>g</p>
+
             <!--<h5>Product successfully added to your shopping list!</h5>-->
             <button type="button" name="addToCart">Add to Shopping List</button>
             <p id="disclaimer">The nutritional information are for 1 portion.</p>
@@ -72,19 +54,37 @@
       </div>
       <div class="content">
         <h2>Ingredients:</h2>
-        <p>
-          <?php echo $infoProduct['ingredients'] ?>
-        </p>
-        
+        <p><?php echo $product["ingredients"] ?></p>
+
       </div>
-      <div class="content">
-        <h2>Countries where sold:</h2>
-        <p>
-          <?php echo $infoProduct['countries'] ?>
-        </p>
-        <!--TODO de pus idk orice content in plus ca parea cam goala pagina-->
-      </div>
+      <?php if($product["countries"]!="") { ?>
+        <div class="content">
+          <h2>Countries where sold:</h2>
+          <p><?php echo $product["manufacturing_places"] ?></p>
+        </div>
+      <?php } ?>
+      <?php if($product["stores"]!="") { ?>
+        <div class="content">
+          <h2>Stores where sold:</h2>
+          <p><?php echo $product["stores"] ?></p>
+        </div>
+      <?php } ?>
+      <?php if($product["manufacturing_places"]!="") { ?>
+        <div class="content">
+          <h2>Manufacturing places:</h2>
+          <p><?php echo $product["manufacturing_places"] ?></p>
+        </div>
+      <?php } ?>
+      <?php if($product["nutrigrade"]=="") { ?>
+        <div class="content">
+          <img src="images/nutriscore/non.svg" alt="nutriscore-non">
+        </div>
+      <?php } else {?>
+        <div class="content">
+          <img src="images/nutriscore/<?php echo $product["nutrigrade"] ?>.svg" alt="nutriscore-non">
+        </div>
     </div>
+      <?php } ?>
     <?php include "./assets/footer.php" ?>
   </body>
 </html>
