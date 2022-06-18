@@ -19,6 +19,7 @@
       $sql = 'SELECT * FROM products ORDER BY id DESC';
       $result = mysqli_query($conn, $sql);
       $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
+      shuffle($products);
      ?>
 
 

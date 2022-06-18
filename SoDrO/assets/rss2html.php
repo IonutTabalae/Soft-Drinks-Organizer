@@ -28,14 +28,6 @@ a {
 </style>
 <?php
 
-// Check http://www.systutorials.com/136102/a-php-function-for-fetching-rss-feed-and-outputing-feed-items-as-html/ for description
-
-// RSS to HTML
-/*
-    $tiem_cnt: max number of feed items to be displayed
-    $max_words: max number of words (not real words, HTML words)
-    if <= 0: no limitation, if > 0 display at most $max_words words
- */
 
 function get_rss_feed_as_html($feed_url, $max_item_cnt = 10, $show_date = true, $show_description = true, $max_words = 0, $cache_timeout = 7200, $cache_prefix = "/tmp/rss2html-")
 {

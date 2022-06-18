@@ -22,7 +22,10 @@
           require("database_con.php");
           $sql         = 'SELECT * FROM products where products.id = ' .$productId;
           $result      = mysqli_query($conn, $sql);
-          $product = $result->fetch_assoc();
+          $product     = $result->fetch_assoc();
+          
+          $sql         = 'update products set views = views + 1 where id = '.$productId;
+          $result1     = mysqli_query($conn,$sql);
         }
       }
     ?>
