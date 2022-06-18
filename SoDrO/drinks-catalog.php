@@ -35,7 +35,12 @@
           <img src="images/products/<?php echo $item['id'] ?>.png" alt="drink-image">
         </div>
         <div class="column">
-          <h2><?php echo $item['name'] . ' - ' . $item['size']; ?></h2>
+          <h2>
+             <a href="<?php $link = 'product-page.php' .'?id='.$item['id'];
+             echo $link ?>">
+            <?php echo $item['name'] . ' - ' . $item['size']; ?>
+             </a>
+          </h2>
           <p><?php echo $item['ingredients'] ?></p>
           <h4><?php echo 'Price: ' . $item['price'] . ' $' ?></h4>
           <!--TODO Mai modific design ul umpic si vad ce mai adaug-->

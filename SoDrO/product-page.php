@@ -14,22 +14,55 @@
     <title></title>
   </head>
   <body>
+<?php
+      if(isset($_GET["id"])){
+        if($_GET["id"]!=""){
+          $productId = $_GET["id"];
+
+          require("database_con.php");
+          $sql         = 'SELECT * FROM products where products.id = ' .$productId;
+          $result      = mysqli_query($conn, $sql);
+          $infoProduct = $result->fetch_assoc();
+
+
+          $sql1         = 'SELECT name from categories where categories.id = '               .$infoProduct["category_id"];
+          $result1      = mysqli_query($conn,$sql1);
+          $categoryName = $result1->fetch_assoc();
+          
+        }
+      }
+?>
+  
     <?php include "./assets/header.php" ?>
     <div class="middle-container">
-      <h1>Starbucks Cappuccino - 220 ml</h1><!--TODO de pus numele produsului + size-->
+      <h1>
+        <?php echo $infoProduct['name'] . ' - ' . $infoProduct['size']; ?>
+      </h1>
       <div class="row">
         <div class="column">
-          <img src="images\products\1.png" alt="product-image">
-                <p>Categories: Beverages, Dairies, Dairy drinks, Flavoured milks, Chocolate milks</p> <!--TODO de inlocuit cu categoria specifica-->
+          <img src="images/products/<?php echo $infoProduct['id'] ?>.png">
+                <p>
+                  Categories: <?php echo $categoryName["name"];  ?>
+                 </p> 
         </div>
         <div class="column">
           <div class="nutrition-div">
             <h2>Nutrition Information</h2>
-            <p>Calories 69kcal</p> <!--TODO de schimbat valoare + bold-->
-            <p>Fat 2.5g</p> <!--TODO de schimbat valoare + bold-->
-            <p>Carbohydrate 8.8g</p> <!--TODO de schimbat valoare + bold-->
-            <p>Fiber 0g</p> <!--TODO de schimbat valoare + bold-->
-            <p>Salt 0.08g</p> <!--TODO de schimbat valoare + bold-->
+            <p>
+              <?php echo 'Calories' . " ". $infoProduct['calories'] . 'kcal' ?>
+            </p> <!--bold-->
+            <p>
+              <?php echo 'Fat' . " ". $infoProduct['fat'] . 'g' ?>
+            </p> <!--bold-->
+            <p>
+              <?php echo 'Carbohydrate' . " ". $infoProduct['carbs'] . 'g' ?>
+            </p> <!--bold-->
+            <p>
+               <?php echo 'Fiber' . " ". $infoProduct['fiber'] . 'g' ?>
+            </p> <!--bold-->
+            <p>
+               <?php echo 'Salt' . " ". $infoProduct['salt'] . 'g' ?>
+            </p> <!--bold-->
             <!--TODO loc pentru mesaj de : Product successfully added to your shopping list!-->
             <!--<h5>Product successfully added to your shopping list!</h5>-->
             <button type="button" name="addToCart">Add to Shopping List</button>
@@ -39,12 +72,17 @@
       </div>
       <div class="content">
         <h2>Ingredients:</h2>
-        <p>lait (contient 3,0% de matières grasses) 75%, café arabica Starbucks® (eau, extrait de café) 19,8%, sucre, cacao maigre en poudre 0,1%, correcteur d'acidité (carbonates de potassium), stabilisants (carraghénanes, gomme guar), émulsifiants (mono - et diglycérides d'acides gras d'origine végétale), arôme naturel, arôme.</p>
-        <!--TODO de pus ingredientele fiecarui produs-->
+        <p>
+          <?php echo $infoProduct['ingredients'] ?>
+        </p>
+        
       </div>
       <div class="content">
         <h2>Countries where sold:</h2>
-        <p>Belgium, France, Luxembourg, Spain</p><!--TODO de pus idk orice content in plus ca parea cam goala pagina-->
+        <p>
+          <?php echo $infoProduct['countries'] ?>
+        </p>
+        <!--TODO de pus idk orice content in plus ca parea cam goala pagina-->
       </div>
     </div>
     <?php include "./assets/footer.php" ?>
