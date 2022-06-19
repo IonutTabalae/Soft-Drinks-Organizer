@@ -26,6 +26,40 @@ body {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 }
 
+.categories {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: wrap;
+}
+
+.category img {
+  max-width: 120px;
+  max-height: 110px;
+  padding-top:30px;
+}
+
+.category {
+  width: 180px;
+  height: 172px;
+  background: linear-gradient(white, #E7FAFE);
+
+  border-radius: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.category p {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: -0.02em;
+}
+
 #tag {
   padding: 5px;
   background: orange;

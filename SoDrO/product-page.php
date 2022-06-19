@@ -1,9 +1,24 @@
+<?php
+  if(isset($_GET["id"])){
+    if($_GET["id"]!=""){
+      $productId = $_GET["id"];
+
+      require("database_con.php");
+      $sql         = 'SELECT * FROM products where products.id = ' .$productId;
+      $result      = mysqli_query($conn, $sql);
+      $product     = $result->fetch_assoc();
+
+      $sql         = 'update products set views = views + 1 where id = '.$productId;
+      $result1     = mysqli_query($conn,$sql);
+    }
+  }
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Page</title><!--TODO de pus numele produsului -->
+    <title><?php echo $product['name'] ?></title>
     <link rel="stylesheet" href="./assets/css/header.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
     <link rel="stylesheet" href="css/product-page.css">
@@ -15,26 +30,9 @@
     <title></title>
   </head>
   <body>
-    <?php
-      if(isset($_GET["id"])){
-        if($_GET["id"]!=""){
-          $productId = $_GET["id"];
-          require("database_con.php");
-          $sql         = 'SELECT * FROM products where products.id = ' .$productId;
-          $result      = mysqli_query($conn, $sql);
-          $product     = $result->fetch_assoc();
-          $sql         = 'update products set views = views + 1 where id = '.$productId;
-          $result1     = mysqli_query($conn,$sql);
-        }
-      }
-    ?>
-
     <?php include "./assets/header.php" ?>
-    
-    
+
     <div class="middle-container">
-      
-      <form action="./includes/addCart.inc.php" method=POST>
       <h1><?php echo $product['name'] ?> - <?php echo $product['size'] ?></h1>
       <div class="row">
         <div class="column">
@@ -53,15 +51,15 @@
             <p>Sugar <?php echo $product["sugar"] ?>g</p>
             <p>Salt <?php echo $product["salt"] ?>g</p>
             <p>Protein <?php echo $product["protein"] ?>g</p>
-            <button type="submit" name="addToCart" id="addToCart">Add to Shopping List</button>
+
+            <form action="./includes/addCart.inc.php" method=POST>
+              <button type="submit" name="addToCart">Add to Shopping List</button>
+            </form>
             <p class="MessageAfterAddProduct"></p>
             <p id="disclaimer">The nutritional information are for 1 portion.</p>
           </div>
-         
         </div>
       </div>
-      </form>
-      
       <div class="content">
         <h2>Ingredients:</h2>
         <p><?php echo $product["ingredients"] ?></p>
@@ -98,7 +96,6 @@
           <img src="images/nutriscore/<?php echo $product["nutrigrade"] ?>.svg" alt="nutriscore-non">
         </div>
         <?php } ?>
-      
     </div>
     <?php include "./assets/footer.php" ?>
     <?php

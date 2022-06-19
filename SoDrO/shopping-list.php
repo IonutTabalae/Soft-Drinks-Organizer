@@ -18,7 +18,7 @@
 <body>
 <?php include "./assets/header.php" ?>
 <div class="middle-container">
-<?php 
+<?php
 require("database_con.php");
     $userId      = $_SESSION['userId'];
     $sql         = 'SELECT * FROM wishlist where userId = ' .$userId;

@@ -42,6 +42,33 @@
           </div>
         <?php endforeach;?>
       </div>
+      <h2 style="font-weight: 600; font-size: 48px;line-height: 58px; letter-spacing: -0.04em; margin-top:90px; margin-bottom:40px; margin-left: 2%;">Categories</h2>
+      <div class="categories">
+        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=carbonated-drink">
+          <img src="images/categories/carbonated-drink.png" alt="carbonated-drink-img">
+          <p>Carbonated Drinks</p>
+        </a></div>
+        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=non-carbonated-drink">
+          <img src="images/categories/non-carbonated-drink.png" alt="non-carbonated-drink-img">
+          <p>Non-carbonated</p>
+        </a></div>
+        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=coffee">
+          <img src="images/categories/coffee.png" alt="coffee-img">
+          <p style="line-height:5px;">Coffee Drinks</p>
+        </a></div>
+        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=tea">
+          <img src="images/categories/tea.png" alt="tea-img">
+          <p style="line-height: 10px">Tea</p>
+        </a></div>
+        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=plant-milk">
+          <img src="images/categories/plant-milk.png" alt="plant--img">
+          <p style="line-height: 5px;">Plant dairy</p>
+        </a></div>
+        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=energy-drink">
+          <img src="images/categories/energy-drink.png" alt="energy-img">
+          <p>Energy Drink</p>
+        </a></div>
+      </div>
 
       <div class="rss">
         <h2>Fresh Beverages Feed</h2>

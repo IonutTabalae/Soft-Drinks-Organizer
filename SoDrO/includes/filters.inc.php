@@ -1,5 +1,4 @@
-
- <?php
+<?php
 if(isset($_GET['category'])){
         $url = basename($_SERVER['REQUEST_URI']);
         $url_components = parse_url($url);
