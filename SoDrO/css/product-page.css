@@ -11,6 +11,34 @@
   transition: all 1s ease 0s;
 }
 
+.print {
+  background:#aaedfb;
+  border: none;
+  position: absolute;
+  right: 145px;
+  font-size: 20px;
+  border-radius:50%;
+  height: 60px;
+  width: 60px;
+  top:70px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  cursor: pointer;
+}
+
+.csv {
+  background:#aaedfb;
+  border: none;
+  position: absolute;
+  top:70px;
+  right: 60px;
+  font-size: 20px;
+  border-radius:50%;
+  height: 60px;
+  width: 60px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  cursor: pointer;
+}
+
 body {
     font-family: 'Inter';
     font-style: normal;
@@ -80,6 +108,8 @@ h1 {
   width: 50%;
   text-align: center;
   padding: 2% 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .row {
@@ -145,10 +175,20 @@ button[name="addToCart"] {
   }
 }
 
+@media only screen and (max-width: 750px) {
+  .csv, .print {
+    top:60px;
+  }
+}
 @media only screen and (max-width: 800px) {
   h1 {
     font-size: 45px;
   }
+  .csv, .print {
+
+    top:60px;
+  }
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -157,5 +197,8 @@ button[name="addToCart"] {
     border-radius: 90px;
     max-width: 350px;
     max-height: 400px;
+  }
+  .csv, .print {
+    display: none;
   }
 }

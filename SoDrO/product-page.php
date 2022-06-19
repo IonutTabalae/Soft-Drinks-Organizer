@@ -31,6 +31,7 @@
     ?>
 
     <?php include "./assets/header.php" ?>
+
     <div class="middle-container">
       <h1><?php echo $product['name'] ?> - <?php echo $product['size'] ?></h1>
       <div class="row">
@@ -39,6 +40,8 @@
                 <p>Categories: <?php echo $product["category"] ?>, <?php echo $product["food_group"] ?></p>
         </div>
         <div class="column">
+          <button onclick="window.print()" class="print" type="button" name="button">🖨️</button>
+          <button onclick="window.location.href='assets/productData.php?productId=<?php echo $product['id'] ?>'" class="csv" type="button" name="button">📋</button>
           <div class="nutrition-div">
             <h2>Nutrition Information</h2>
             <p>Calories <?php echo $product["calories"] ?>kcal</p>
