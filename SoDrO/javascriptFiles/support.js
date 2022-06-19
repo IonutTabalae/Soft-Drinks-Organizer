@@ -25,5 +25,5 @@ function putMessageAfterNewsletter(msg) {
 function putMessageAfterAddProduct(msg) {
   $(".MessageAfterAddProduct").html("<b>" + msg + "</b>");
   $(".MessageAfterAddProduct").css("display", "block");
-  $(".MessageAfterAddProduct").css("color", "red");
+  $(".MessageAfterAddProduct").css("color", "green");
 }

@@ -51,11 +51,11 @@
             <p>Sugar <?php echo $product["sugar"] ?>g</p>
             <p>Salt <?php echo $product["salt"] ?>g</p>
             <p>Protein <?php echo $product["protein"] ?>g</p>
+            <p class="MessageAfterAddProduct" style="border: none; text-align-last: center; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;"></p>
 
             <form action="./includes/addCart.inc.php" method=POST>
               <button type="submit" name="addToCart">Add to Shopping List</button>
             </form>
-            <p class="MessageAfterAddProduct"></p>
             <p id="disclaimer">The nutritional information are for 1 portion.</p>
           </div>
         </div>
@@ -102,7 +102,7 @@
         $_SESSION["productId"] = $productId;
         if(isset($_GET["add"])){
         if($_GET["add"]=="succes"){
-          echo '<script>', 'putMessageAfterAddProduct("Product added succesfully to cart!");', '</script>';
+          echo '<script>', 'putMessageAfterAddProduct("Product added successfully to cart!");', '</script>';
         }
       }
     ?>
