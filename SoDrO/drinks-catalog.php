@@ -34,7 +34,7 @@
         shuffle($products);
       }
      ?>
-
+    <?php include "./includes/filters.inc.php" ?>
     <?php include "./assets/header.php" ?>
     <div class="middle-container">
     <h1>Drinks Catalog</h1>

@@ -11,6 +11,7 @@
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Inter" rel='stylesheet'>
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="./javascriptFiles/support.js"></script>
     <title></title>
   </head>
   <body>
@@ -18,12 +19,10 @@
       if(isset($_GET["id"])){
         if($_GET["id"]!=""){
           $productId = $_GET["id"];
-
           require("database_con.php");
           $sql         = 'SELECT * FROM products where products.id = ' .$productId;
           $result      = mysqli_query($conn, $sql);
           $product     = $result->fetch_assoc();
-
           $sql         = 'update products set views = views + 1 where id = '.$productId;
           $result1     = mysqli_query($conn,$sql);
         }
@@ -31,8 +30,11 @@
     ?>
 
     <?php include "./assets/header.php" ?>
-
+    
+    
     <div class="middle-container">
+      
+      <form action="./includes/addCart.inc.php" method=POST>
       <h1><?php echo $product['name'] ?> - <?php echo $product['size'] ?></h1>
       <div class="row">
         <div class="column">
@@ -51,13 +53,15 @@
             <p>Sugar <?php echo $product["sugar"] ?>g</p>
             <p>Salt <?php echo $product["salt"] ?>g</p>
             <p>Protein <?php echo $product["protein"] ?>g</p>
-
-            <!--<h5>Product successfully added to your shopping list!</h5>-->
-            <button type="button" name="addToCart">Add to Shopping List</button>
+            <button type="submit" name="addToCart" id="addToCart">Add to Shopping List</button>
+            <p class="MessageAfterAddProduct"></p>
             <p id="disclaimer">The nutritional information are for 1 portion.</p>
           </div>
+         
         </div>
       </div>
+      </form>
+      
       <div class="content">
         <h2>Ingredients:</h2>
         <p><?php echo $product["ingredients"] ?></p>
@@ -94,7 +98,16 @@
           <img src="images/nutriscore/<?php echo $product["nutrigrade"] ?>.svg" alt="nutriscore-non">
         </div>
         <?php } ?>
+      
     </div>
     <?php include "./assets/footer.php" ?>
+    <?php
+        $_SESSION["productId"] = $productId;
+        if(isset($_GET["add"])){
+        if($_GET["add"]=="succes"){
+          echo '<script>', 'putMessageAfterAddProduct("Product added succesfully to cart!");', '</script>';
+        }
+      }
+    ?>
   </body>
 </html>
