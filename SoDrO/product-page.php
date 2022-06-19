@@ -102,7 +102,9 @@
         $_SESSION["productId"] = $productId;
         if(isset($_GET["add"])){
         if($_GET["add"]=="succes"){
-          echo '<script>', 'putMessageAfterAddProduct("Product added successfully to cart!");', '</script>';
+          echo '<script>', 'putMessageAfterAddProduct("Product added successfully to list!");', '</script>';
+        }elseif($_GET["add"]=="alreadyExists") {
+          echo '<script>', 'putRedMessageAfterAddProduct("Product already exists in your list!");', '</script>';
         }
       }
     ?>

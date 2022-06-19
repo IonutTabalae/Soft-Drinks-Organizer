@@ -19,7 +19,8 @@
       if(isset($_GET['search'])) {
         /*pentru a lua doar primele 400 caractere din descriere*/
         $sql = "SELECT id, name, size, brand, category, LEFT (ingredients, 400) AS ingredients, allergens, calories, fat, carbs, sugar, fiber, protein, salt,
-        food_group, nutrigrade, link FROM products WHERE lower(name) LIKE '%" .$_GET['search'] . "%'";
+        food_group, nutrigrade, link FROM products WHERE lower(name) LIKE '%" .$_GET['search'] . "%' OR lower(category) LIKE '%" .$_GET['search'] . "%' OR lower(food_group) LIKE '%" .$_GET['search'] .
+        "%' OR lower(brand) LIKE '%" .$_GET['search'] . "%'";
 
         $result = mysqli_query($conn, $sql);
         $products = mysqli_fetch_all($result, MYSQLI_ASSOC);

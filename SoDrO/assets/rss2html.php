@@ -10,20 +10,25 @@
 .feed-lists {
   padding-left:1em;
 }
+.feed-item {
+  margin-bottom: 15px;
+}
 .feed-item-image {
   max-width: 300px;
   max-height: 200px;
   float: right;
   margin-left: 10px;
 }
-a {
+.feed-lists a {
   text-decoration: none;
   color: #FF7426;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
   line-height: 175%;
+}
+.feed-title {
+  font-size: 20px;
 }
 </style>
 <?php
@@ -61,7 +66,7 @@ function get_rss_feed_as_html($feed_url, $max_item_cnt = 10, $show_date = true, 
         }
         array_push($feed, $item);
     }
-    // real good count
+
     if ($max_item_cnt > count($feed)) {
         $max_item_cnt = count($feed);
     }
@@ -119,4 +124,4 @@ function output_rss_feed($feed_url, $max_item_cnt = 10, $show_date = true, $show
 ?>
 
 <?php
-output_rss_feed('https://www.beveragedaily.com/Info/BeverageDaily-RSS', 10, true, true, 200);
+output_rss_feed('https://www.beveragedaily.com/Info/BeverageDaily-RSS', 7, true, true, 500);

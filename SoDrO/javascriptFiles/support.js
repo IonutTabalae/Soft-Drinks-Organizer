@@ -27,3 +27,9 @@ function putMessageAfterAddProduct(msg) {
   $(".MessageAfterAddProduct").css("display", "block");
   $(".MessageAfterAddProduct").css("color", "green");
 }
+
+function putRedMessageAfterAddProduct(msg) {
+  $(".MessageAfterAddProduct").html("<b>" + msg + "</b>");
+  $(".MessageAfterAddProduct").css("display", "block");
+  $(".MessageAfterAddProduct").css("color", "red");
+}
