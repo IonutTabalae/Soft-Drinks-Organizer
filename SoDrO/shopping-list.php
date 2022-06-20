@@ -58,9 +58,9 @@
         <div class="stats-for-nerds">
           <h2>Stats for Nerds:</h2>
           <h3>Number of drinks: <?php echo $numberOfDrinks."." ?></h3>
-          <h3>Total calories: <?php echo $totalCalories." kcal." ?></h3>
+          <h3>Total calories: <?php echo (int)$totalCalories." kcal." ?></h3>
           <h3>Average calories per serving: <?php if($numberOfDrinks != 0) echo (int)($totalCalories/$numberOfDrinks)." kcal." ?></h3>
-          <h3>Total sugar: <?php echo $totalSugar." g (daily limit is 36g)." ?></h3>
+          <h3>Total sugar: <?php echo (int)$totalSugar." g (daily limit is 36g)." ?></h3>
           <h3>Allergens: <?php echo $totalAllergens."." ?></h3>
         </div>
     </div>

@@ -12,15 +12,15 @@ $repeat = mysqli_fetch_all($result, MYSQLI_ASSOC);
 if(empty($repeat) && $_SESSION['userId']!="") {
   $sql = "insert into wishlist (userId,productId) values (" .$userId . ','. $productId1.')';
   mysqli_query($conn, $sql);
-  header("Location:http://localhost/SoDrO/product-page.php?id=$productId1&add=succes");
+  header("Location:../product-page.php?id=$productId1&add=succes");
 }
 else if (!empty($repeat) && isset($_SESSION['userId'])) {
-  header("Location:http://localhost/SoDrO/product-page.php?id=$productId1&add=alreadyExists");
+  header("Location:../product-page.php?id=$productId1&add=alreadyExists");
 }
 unset($_SESSION['productId']);
 exit();
 }
 else {
-  header("Location:http://localhost/SoDrO/product-page.php?id=$productId1");
+  header("Location:../product-page.php?id=$productId1");
 }
 ?>
