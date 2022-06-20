@@ -71,7 +71,7 @@
       </div>
 
       <div class="rss">
-        <h2>Fresh Beverages Feed</h2>
+        <h2>Fresh Beverages News</h2>
         <?php include "./assets/rss2html.php" ?>
       </div>
 

@@ -25,6 +25,8 @@ h1 {
   line-height: 77px;
   color: black;
   padding: 40px;
+  margin-top:20px;
+  margin-bottom:20px;
 }
 
 h2 {
@@ -42,6 +44,7 @@ h2 {
   float: left;
   width: 100%;
   background-color: #f9feff;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .product-card p, .product-card h2 {
@@ -108,8 +111,8 @@ h2 {
   flex-direction: row;
   justify-content: space-around;
   flex-flow: wrap;
+  padding-bottom: 32px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding-bottom: 100px;
 }
 
 .category img {
@@ -126,6 +129,7 @@ h2 {
   border-radius: 20px;
   text-align: center;
   box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .category p {
@@ -137,7 +141,58 @@ h2 {
   letter-spacing: -0.02em;
 }
 
+.advanced-filters {
+  margin-top: 40px;
+  padding-bottom: 70px;
 
+  width: 60%;
+  margin: auto;
+  background: #ffd3ba;
+  margin-top: 35px;
+  padding-top:25px;
+  border-radius: 30px;
+  margin-bottom: 40px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.advanced-filters input, .advanced-filters select {
+  text-decoration: none;
+  font-family: 'Inter';
+  padding: 3px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background: white;
+  border: none;
+  font-size:20px;
+  border-radius: 10px;
+}
+
+.advanced-filters button {
+  float: right;
+  margin-right: 30px;
+  color: white;
+  background: black;
+  padding: 20px;
+  border-radius: 17px;
+  font-family: "Inter";
+  cursor: pointer;
+  margin-bottom: auto;
+  font-size:17px;
+  line-height: 13px;
+
+}
+
+.advanced-filters p {
+  font-size: 20px;
+}
+
+.filter {
+  margin-bottom: 15px;
+}
+
+.filter-last {
+  margin-bottom: 5px;
+}
 
 .search-bar form button.btn {
     position: absolute;
@@ -176,6 +231,17 @@ h2 {
   .search-bar {
     width: 80%;
     margin: auto;
+  }
+  .filter-last {
+    margin-bottom: 15px;
+  }
+  .advanced-filters button {
+    float: none;
+    margin-right: 0;
+  }
+  .advanced-filters {
+    width: 100%;
+    padding-bottom: 27px;
   }
 }
 
