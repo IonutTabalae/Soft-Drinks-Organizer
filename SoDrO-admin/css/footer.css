@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.bottom-container, footer {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 175%;
+  text-align: center;
+  color: #00000099;
+  margin: 0;
+  padding: 0;
+}
+
+.bottom-container li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.bottom-container div {
+  margin-right: auto;
+  text-align: left;
+}
+
+.bottom-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 5%;
+}
+
+footer {
+  border-top: black;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0 5%;
+  padding-top: 20px;
+}
+
+footer ul {
+  text-align: right;
+}
+
+footer ul li {
+  padding: 0 20px;
+}
+
+footer li a {
+  text-decoration: none;
+  color: black;
+}
+
+footer li {
+  display: inline-block;
+  list-style: none;
+}
+
+.bottom-links {
+  list-style: none;
+}
+
+.bottom-links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.bottom-links li a {
+  font-size: 16px;
+  transition: all 3s ease 0s;
+}
+
+.bottom-links li a:hover {
+  transition: all 0.2s ease 0s;
+  color: #FF7426;
+}
+
+.bottom-container .logo {
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.logo {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+}
+
+@media only screen and (max-width: 800px) {
+  footer ul {
+    text-align: center;
+  }
+
+  footer ul li {
+    padding: 0 5px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bottom-container div {
+    margin-right: auto;
+    text-align: left;
+    font-size: 12px;
+  }
+  .bottom-links li a {
+    font-size: 14px;
+    transition: initial;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .bottom-links li a {
+    font-size: 10px;
+    transition: initial;
+  }
+
+  footer li a {
+    font-size: 10px;
+  }
+}

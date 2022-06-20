@@ -43,8 +43,48 @@
       <form class="search-bar" action="drinks-catalog.php" method="GET">
         <input type="text" name="search" placeholder="Search...">
         <button type="submit"  class="btn" >⌕</button>
+        <!--TODO --><a class="btn-1" style="float:left; line-height: 40px; margin-left: -70px; margin-top: 5px; background: lightblue; padding: 10px; border-radius:20px;">Filters</a>
       </form>
     </div>
+      <div class="categories">
+        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=carbonated-drink">
+          <img src="images/categories/carbonated-drink.png" alt="carbonated-drink-img">
+          <p>Carbonated Drinks</p>
+        </a></div>
+        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=non-carbonated-drink">
+          <img src="images/categories/non-carbonated-drink.png" alt="non-carbonated-drink-img">
+          <p>Non-carbonated</p>
+        </a></div>
+        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=coffee">
+          <img src="images/categories/coffee.png" alt="coffee-img">
+          <p style="line-height:5px;">Coffee Drinks</p>
+        </a></div>
+        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=tea">
+          <img src="images/categories/tea.png" alt="tea-img">
+          <p style="line-height: 10px">Tea</p>
+        </a></div>
+        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=plant-milk">
+          <img src="images/categories/plant-milk.png" alt="plant-img">
+          <p style="line-height: 5px;">Plant dairy</p>
+        </a></div>
+        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=energy-drink">
+          <img src="images/categories/energy-drink.png" alt="energy-img">
+          <p>Energy Drink</p>
+        </a></div>
+        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=non-alcoholic-beer">
+          <img src="images/categories/non-alcoholic-beer.png" alt="non-alcohol-img">
+          <p>Non Alcoholic</p>
+        </a></div>
+        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=milk">
+          <img src="images/categories/milk.png" alt="milk-img">
+          <p>Animal dairy</p>
+        </a></div>
+        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=water">
+          <img src="images/categories/waters.png" alt="water-img">
+          <p>Waters</p>
+        </a></div>
+      </div>
+
     <?php if(empty($products)): ?>
       <h2 class="idk momentan" style="color: #FF7426; margin-top: 100px;">no such drink yet...</h2>
       <a href="contact-us.php#newsletterHref"<p style="color: #FF7426; margin-bottom: 100px;">You can still subscribe to our newsletter to get the latest news about our page.</p></a>
