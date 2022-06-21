@@ -14,7 +14,7 @@
               </ul>
             </nav>
             <div class="left-nav">
-              <a id=user-nav href="profile.php"><?php echo $_SESSION["username"]; ?></a></li>
+              <a id=user-nav href="profile.php"><?php echo $_SESSION["username"]; ?></a>
               <a class="login" href="./includes/logout.inc.php">Logout</a>
             </div>
       <?php

@@ -22,9 +22,11 @@
     <div class="row">
       <div class="column">
         <div class="profile-pic-div">
-          <img src="images/<?php echo "{$_SESSION['image']}"; ?>" alt="profile-picture">
-          <label class="custom-photo-upload">
-            <input type="file" name="profile-pic" accept="image/*" />Change Profile Picture</label>
+          <img src="images/profilePics/<?php echo "{$_SESSION['image']}"; ?>" alt="profile-picture">
+          <form action="./includes/uploadProfilePic.php" method="post" enctype="multipart/form-data" style="margin-top: 10px;">
+            <label class="custom-photo-upload"><input type="file" name="profile-pic" accept="image/x-png, image/jpeg" />Change Profile Picture</label>
+            <button style="margin:0; font-family: 'Inter' " type="submit" name="upload">Upload</button>
+          </form>
         </div>
         <div class="description-div">
           <div class="messageAfterUpdateProfile"   style="display:none"></div>
@@ -62,7 +64,7 @@
 
         <form method=POST action="./includes/userPassword.inc.php">
           <div class="messageAfterUpdatePassword"   style="display:none"></div>
-          <input type="Submit" name ="changePassword" id = "changePassword"value="Change Password">
+          <input type="Submit" name ="changePassword" id = "changePassword" value="Change Password">
           <div class="input-row">
             <p class="input-explanation">PASSWORD</p>
             <input type="password" name="newPassword" placeholder="Enter your new password..." required>

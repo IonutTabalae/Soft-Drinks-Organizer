@@ -1,7 +1,7 @@
 <?php
       require("../database_con.php");
       if(!isset($_GET['productId']))
-        echo "erroare";
+        echo "eroare";
       $productId = $_GET['productId'];
 
       $sql         = 'SELECT * FROM products where products.id = ' .$productId;

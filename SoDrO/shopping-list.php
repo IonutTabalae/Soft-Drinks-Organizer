@@ -35,7 +35,7 @@
             $product = mysqli_fetch_all($result, MYSQLI_ASSOC);
            ?>
 
-           <div class="product-card"> <a style="all: unset; cursor: pointer;"href="product-page.php?id=<?php echo $product[0]['id'] ?>">
+           <div class="product-card"> <a style="all: unset; cursor: pointer;" href="product-page.php?id=<?php echo $product[0]['id'] ?>">
              <div class="column">
                <img src="images/products/<?php echo $product[0]['id'] ?>.png" alt="drink-image">
              </div>
@@ -51,7 +51,7 @@
                <?php $totalSugar += $product[0]['sugar'] ?>
                <?php if($product[0]['allergens']!='' && $product[0]['allergens']!=' ') $totalAllergens .= ' '.$product[0]['allergens']; ?>
              </div>
-             <a class="delete-button"href="includes/deleteCart.inc.php?deleteItem=<?php echo $product[0]['id'] ?>" style="float:right; float: bottom;">✖</a>
+             <a class="delete-button" href="includes/deleteCart.inc.php?deleteItem=<?php echo $product[0]['id'] ?>" style="float:right;">✖</a>
            </a></div>
         <?php endforeach; unset($product); ?>
         <hr style="margin-top: 100px;">
@@ -62,6 +62,11 @@
           <h3>Average calories per serving: <?php if($numberOfDrinks != 0) echo (int)($totalCalories/$numberOfDrinks)." kcal." ?></h3>
           <h3>Total sugar: <?php echo (int)$totalSugar." g (daily limit is 36g)." ?></h3>
           <h3>Allergens: <?php echo $totalAllergens."." ?></h3>
+          <div class="button-export" style="float: right;">
+            <p style="display: inline; ">Export as CSV: </p>
+            <button onclick="window.location.href='./assets/cartData.php'" class="csv" type="button" name="button">📋</button>
+
+          </div>
         </div>
     </div>
   <?php include "./assets/footer.php" ?>

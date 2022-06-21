@@ -62,7 +62,7 @@ body {
   letter-spacing: -0.02em;
 }
 
-#tag {
+.tag {
   padding: 5px;
   background: orange;
   float: left;
@@ -123,7 +123,7 @@ h1 {
   box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 }
 
-.column p:not(#tag) {
+.column p:not(.tag) {
   margin-left: 20px;
   margin-right: 20px;
 }

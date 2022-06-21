@@ -27,7 +27,6 @@
     <link href="https://fonts.googleapis.com/css?family=Inter" rel='stylesheet'>
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="./javascriptFiles/support.js"></script>
-    <title></title>
   </head>
   <body>
     <?php include "./assets/header.php" ?>
@@ -36,7 +35,7 @@
       <h1><?php echo $product['name'] ?> - <?php echo $product['size'] ?></h1>
       <div class="row">
         <div class="column">
-          <img src="images\products\<?php echo $product["id"] ?>.png" alt="drink-image">
+          <img src="images/products/<?php echo $product["id"] ?>.png" alt="drink-image">
                 <p>Categories: <?php echo $product["category"] ?>, <?php echo $product["food_group"] ?></p>
         </div>
         <div class="column">

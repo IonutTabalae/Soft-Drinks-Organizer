@@ -1,36 +1,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="./assets/css/rss.css">
 <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css?family=Inter" rel='stylesheet'>
-<style>
-.feed-description {
-  padding-left:10px;
-  margin-left:10px;
-  border-left:2px solid #eee;
-}
-.feed-lists {
-  padding-left:1em;
-}
-.feed-item {
-  margin-bottom: 15px;
-}
-.feed-item-image {
-  max-width: 300px;
-  max-height: 200px;
-  float: right;
-  margin-left: 10px;
-}
-.feed-lists a {
-  text-decoration: none;
-  color: #FF7426;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  line-height: 175%;
-}
-.feed-title {
-  font-size: 20px;
-}
-</style>
 <?php
 
 

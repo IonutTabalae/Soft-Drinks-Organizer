@@ -15,6 +15,17 @@ body {
 
 }
 
+.csv {
+  background:#FF7426;
+  border: none;
+  font-size: 20px;
+  border-radius:50%;
+  height: 60px;
+  width: 60px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  cursor: pointer;
+}
+
 .middle-container {
   margin: 0 5%;
 }

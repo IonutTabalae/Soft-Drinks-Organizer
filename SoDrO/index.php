@@ -23,11 +23,11 @@
       <div class="recomandate">
         <?php $count = 0; foreach($topProducts as $item): $count += 1?>
           <div class="product">
-            <a style="all: inherit; cursor: pointer;"href="product-page.php?id=<?php echo $item['id'] ?>">
+            <a style="all: inherit; cursor: pointer;" href="product-page.php?id=<?php echo $item['id'] ?>">
             <div class="row">
               <div class="column">
 
-                <p><span id="tag">🔥 Most popular choices #<?php echo $count ?></span></p>
+                <p><span class="tag">🔥 Most popular choices #<?php echo $count ?></span></p>
                 <h1><?php echo $item["name"] ?></h1>
                 <p>Psst! Want to know a secret?</p>
                 <br>
@@ -44,27 +44,27 @@
       </div>
       <h2 style="font-weight: 600; font-size: 48px;line-height: 58px; letter-spacing: -0.04em; margin-top:90px; margin-bottom:40px; margin-left: 2%;">Categories</h2>
       <div class="categories">
-        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=carbonated-drink">
+        <div class="category"><a style="all: inherit; cursor: pointer;" href="drinks-catalog.php?category=carbonated-drink">
           <img src="images/categories/carbonated-drink.png" alt="carbonated-drink-img">
           <p>Carbonated Drinks</p>
         </a></div>
-        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=non-carbonated-drink">
+        <div class="category"><a style="all: inherit; cursor: pointer;" href="drinks-catalog.php?category=non-carbonated-drink">
           <img src="images/categories/non-carbonated-drink.png" alt="non-carbonated-drink-img">
           <p>Non-carbonated</p>
         </a></div>
-        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=coffee">
+        <div class="category"><a style="all: inherit; cursor: pointer;" href="drinks-catalog.php?category=coffee">
           <img src="images/categories/coffee.png" alt="coffee-img">
           <p style="line-height:5px;">Coffee Drinks</p>
         </a></div>
-        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=tea">
+        <div class="category"><a style="all: inherit; cursor: pointer;" href="drinks-catalog.php?category=tea">
           <img src="images/categories/tea.png" alt="tea-img">
           <p style="line-height: 10px">Tea</p>
         </a></div>
-        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=plant-milk">
+        <div class="category"><a style="all: inherit; cursor: pointer;" href="drinks-catalog.php?category=plant-milk">
           <img src="images/categories/plant-milk.png" alt="plant--img">
           <p style="line-height: 5px;">Plant dairy</p>
         </a></div>
-        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=energy-drink">
+        <div class="category"><a style="all: inherit; cursor: pointer;" href="drinks-catalog.php?category=energy-drink">
           <img src="images/categories/energy-drink.png" alt="energy-img">
           <p>Energy Drink</p>
         </a></div>
@@ -73,6 +73,7 @@
       <div class="rss">
         <h2>Fresh Beverages News</h2>
         <?php include "./assets/rss2html.php" ?>
+        <a href="https://www.beveragedaily.com/Info/BeverageDaily-RSS" style="float:right;">News taken from BeverageDaily website RSS.</a>
       </div>
 
     </div>

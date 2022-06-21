@@ -18,7 +18,7 @@
     <?php
       if(isset($_GET['search']) && $_GET['search']!='') {
         $search = filter_input(INPUT_GET, $_GET['search'], FILTER_SANITIZE_STRING);
-        
+
         /*pentru a lua doar primele 400 caractere din descriere*/
         $sql = "SELECT id, name, size, brand, category, LEFT (ingredients, 400) AS ingredients, allergens, calories, fat, carbs, sugar, fiber, protein, salt,
         food_group, nutrigrade, link FROM products WHERE lower(name) LIKE '%" .$_GET['search'] . "%' OR lower(category) LIKE '%" .$_GET['search'] . "%' OR lower(food_group) LIKE '%" .$_GET['search'] .
@@ -59,11 +59,11 @@
         <button type="submit"  class="btn" >⌕</button>
       </form>
     </div>
-    <form class="advanced-filters" action="" method="post">
+    <form class="advanced-filters" method="post">
       <div class="filter" >
         <p style="display: inline;">Calories: </p>
-        <input type="number" name="min-calories" value="minCalories" placeholder="Min" style="width:70px;">
-        <input type="number" name="max-calories" value="maxCalories" placeholder="Max" style="width:70px;">
+        <input type="number" name="min-calories" placeholder="Min" style="width:70px;">
+        <input type="number" name="max-calories" placeholder="Max" style="width:70px;">
       </div>
       <div class="filter">
         <p style="display: inline;">Sugar: </p>
@@ -83,7 +83,7 @@
       <div class="filter-last">
         <p style="display: inline;">Allergens: </p>
         <select name="allergens">
-          <option value=""></option>
+          <option value=""> &nbsp;</option>
           <option value="none">-none-</option>
           <option value="gluten">Gluten</option>
           <option value="soybeans">Soybeans</option>
@@ -95,39 +95,39 @@
     </form>
 
       <div class="categories" id="go">
-        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=carbonated-drink#go">
+        <div class="category"><a style="all: inherit; cursor: pointer;" href="drinks-catalog.php?category=carbonated-drink#go">
           <img src="images/categories/carbonated-drink.png" alt="carbonated-drink-img">
           <p>Carbonated Drinks</p>
         </a></div>
-        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=non-carbonated-drink#go">
+        <div class="category"><a style="all: inherit; cursor: pointer;" href="drinks-catalog.php?category=non-carbonated-drink#go">
           <img src="images/categories/non-carbonated-drink.png" alt="non-carbonated-drink-img">
           <p>Non-carbonated</p>
         </a></div>
-        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=coffee#go">
+        <div class="category"><a style="all: inherit; cursor: pointer;" href="drinks-catalog.php?category=coffee#go">
           <img src="images/categories/coffee.png" alt="coffee-img">
           <p style="line-height:5px;">Coffee Drinks</p>
         </a></div>
-        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=tea#go">
+        <div class="category"><a style="all: inherit; cursor: pointer;" href="drinks-catalog.php?category=tea#go">
           <img src="images/categories/tea.png" alt="tea-img">
           <p style="line-height: 10px">Tea</p>
         </a></div>
-        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=plant-milk#go">
+        <div class="category"><a style="all: inherit; cursor: pointer;" href="drinks-catalog.php?category=plant-milk#go">
           <img src="images/categories/plant-milk.png" alt="plant-img">
           <p style="line-height: 5px;">Plant dairy</p>
         </a></div>
-        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=energy-drink#go">
+        <div class="category"><a style="all: inherit; cursor: pointer;" href="drinks-catalog.php?category=energy-drink#go">
           <img src="images/categories/energy-drink.png" alt="energy-img">
           <p>Energy Drink</p>
         </a></div>
-        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=non-alcoholic-beer#go">
+        <div class="category"><a style="all: inherit; cursor: pointer;" href="drinks-catalog.php?category=non-alcoholic-beer#go">
           <img src="images/categories/non-alcoholic-beer.png" alt="non-alcohol-img">
           <p>Non Alcoholic</p>
         </a></div>
-        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=milk#go">
+        <div class="category"><a style="all: inherit; cursor: pointer;" href="drinks-catalog.php?category=milk#go">
           <img src="images/categories/milk.png" alt="milk-img">
           <p>Animal dairy</p>
         </a></div>
-        <div class="category"><a style="all: inherit; cursor: pointer;"href="drinks-catalog.php?category=water#go">
+        <div class="category"><a style="all: inherit; cursor: pointer;" href="drinks-catalog.php?category=water#go">
           <img src="images/categories/waters.png" alt="water-img">
           <p>Waters</p>
         </a></div>
@@ -140,7 +140,7 @@
     <?php endif; ?>
 
     <?php foreach($products as $item): ?>
-      <a style="all: unset; cursor: pointer;"href="product-page.php?id=<?php echo $item['id'] ?>">
+      <a style="all: unset; cursor: pointer;" href="product-page.php?id=<?php echo $item['id'] ?>">
       <div class="product-card">
         <div class="column">
           <img src="images/products/<?php echo $item['id'] ?>.png" alt="drink-image">

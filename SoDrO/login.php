@@ -35,7 +35,7 @@
         </span>
         <input type="password" name="password" id="password" placeholder="Enter password...">
       </div>
-      <button type="submit" name="submit" id="submitLogin" placeholder="Login">
+      <button type="submit" name="submit" id="submitLogin">
         Login
       </button>
 
