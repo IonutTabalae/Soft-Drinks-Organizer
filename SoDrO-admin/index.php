@@ -17,21 +17,22 @@
   </head>
   <?php
 require ("database_con.php");
-$sql = 'select * from newsletter';
+$sql = 'select * from newsletter ORDER BY id';
 $result = mysqli_query($conn, $sql);
 $emailNewsletter = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-$sql1 = 'select * from users';
+$sql1 = 'select * from users ORDER BY id';
 $result1 = mysqli_query($conn, $sql1);
 $users = mysqli_fetch_all($result1, MYSQLI_ASSOC);
 
-$sql2 = 'select * from products';
+$sql2 = 'select * from products ORDER BY id';
 $result2 = mysqli_query($conn, $sql2);
 $products = mysqli_fetch_all($result2, MYSQLI_ASSOC);
 
 ?>
-  
+
   <body>
+
     <?php include "./header-footer/header.php" ?>
     <div class="middle-container">
       <div class = "newsletter">
@@ -49,7 +50,7 @@ $products = mysqli_fetch_all($result2, MYSQLI_ASSOC);
     echo "<tbody data-link='row' class='rowlink'>";
     echo "<tr>";
     echo "<td>" . $item["id"] . "</td>";
-    echo "<td>" . $item["email"] . "</td>";
+    echo "<td><a href=\""."mailto:".$item['email']."?subject=Soft%20Drinks%20Organizer-Newsletter&body=Hello!%20Hope%20this%20email%20finds%20you%20well!\">".$item["email"]."</a></td>";
     echo "</tr>";
     echo "</tbody>";
 ?>
@@ -59,7 +60,7 @@ endforeach; ?>
           <div class="messageUnderNewsletter" style="display:none"></div>
           <div class="lower">
          <label  for="emailNewsletter">Email to unsubscribe:</label><br>
-         <input type="text" id="emailNewsletter" name="emailNewsletter" placeholder="Insert here the email"><br>
+         <input type="text" id="emailNewsletter" name="emailNewsletter" placeholder="Email to unsubscribe..."><br>
         <button  name="unsubscribe">Delete</button>
           </div>
         </form>
@@ -94,12 +95,12 @@ endforeach; ?>
         <div class="messageAfterDeleteUsers" style="display:none"> </div>
         <div class="lower">
          <label  for="userId">User id account for deleting:</label><br>
-         <input type="text" id="userId" name="userId" placeholder="Insert here the user id!"><br>
+         <input type="text" id="userId" name="userId" placeholder="User ID to delete..."><br>
          <button  name="deleteAcc">Delete</button>
         </div>
       </form>
       </div>
-        
+
       <!-- Product -->
       <div class = "Products">
         <form action="./includes/deleteProduct.inc.php" method="POST">
@@ -111,7 +112,7 @@ endforeach; ?>
             <th>Name</th>
             <th>Size</th>
             <th>Category</th>
-            
+
           </tr>
           <?php foreach ($products as $product): ?>
               <?php
@@ -121,7 +122,7 @@ endforeach; ?>
     echo "<td>" . $product["name"] . "</td>";
     echo "<td>" . $product["size"] . "</td>";
     echo "<td>" . $product["category"] . "</td>";
-    
+
     echo "</tr>";
     echo "</tbody>";
 ?>
@@ -131,14 +132,14 @@ endforeach; ?>
         <div class="messageAfterDeleteProduct" style="display:none"> </div>
         <div class="lower" id ="deleteProduct">
          <label  for="productId">Product id for deleting:</label><br>
-         <input type="text" id="productId" name="productId" placeholder="Insert here the product id!"><br>
+         <input type="text" id="productId" name="productId" placeholder="Product ID to delete..."><br>
          <button  name="deleteProduct">Delete</button>
         </div>
         </form>
-        <form>
+        <form class="add-product">
           <div class="messageAfterInsertProduct" style="display:none"> </div>
-  
-          <h3>Add new product </h3> 
+
+          <h2>Add new product </h2>
           <div class="form-item" >
             <input type="text" name="productName" id="name" placeholder="Enter the product name">
           </div>
@@ -151,7 +152,7 @@ endforeach; ?>
            <div class="form-item">
              <input type="text" name="productCalories" id="calories" placeholder="Enter the number of calories">
           </div>
-         <button type="submit" name="addProduct" id="addProduct">Add Product</button > 
+         <button type="submit" name="addProduct" id="addProduct">Add Product</button >
         </form>
       </div>
    </div>

@@ -1,10 +1,20 @@
+.middle-container {
+  margin: 3%;
+  font-family: "Inter";
+}
+
 table {
   border-collapse: collapse;
   width: 100%;
   color: #588c7e;
-  font-family: monospace;
+  font-family: "Inter";
   font-size: 25px;
   text-align: left;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+h1 {
+  margin-bottom: 15px;
 }
 
 th {
@@ -17,8 +27,9 @@ tr:nth-child(even) {
 }
 
 .lower {
-  margin-top: 10px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 80px;
+  font-size: 20px;
 }
 
 .users {
@@ -29,6 +40,23 @@ tr:nth-child(even) {
 .newsletter {
   margin-top: 20px;
   margin-bottom: 30px;
+}
+
+tr {
+  border-bottom: 1px solid gray;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+table a {
+  all: inherit;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .form-item {
@@ -45,7 +73,7 @@ tr:nth-child(even) {
   border: 1px solid rgb(82, 81, 81);
 }
 
-input[type=text] {
+.form-item input[type=text] {
   background-color: #c8d3b4;
   font-style: normal;
   font-weight: 300;
@@ -54,7 +82,7 @@ input[type=text] {
   font-family: 'Inter';
   background: transparent;
   width: 80%;
-  height: 20px;
+  height: 30px;
   outline: none;
   border: none;
   margin: auto;
@@ -63,19 +91,43 @@ input[type=text] {
   text-align: left;
 }
 
+.lower input {
+  font-size: 24px;
+  border-radius: 10px;
+  border: 1px solid #456d62;
+  font-weight: 400px;
+  width: 400px;
+  padding-left: 20px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+
+.lower button {
+  font-family: "Inter";
+  text-decoration: none;
+  background: #ff6666;
+  border: none;
+  padding: 7px 10px;
+  margin-top: 6px;
+  border-radius: 10px;
+
+}
+
+
 button[type=submit] {
   font-family: "Inter";
   width: 250px;
   font-size: 30px;
   margin: 10px auto;
   padding: 10px;
-  background: rgb(10, 73, 22);
+  background: #588c7e;
   border: none;
   color: white;
   border-radius: 15px;
 }
 
 button[type=submit]:hover {
-  background-color: #692ccc;
+  background-color: #456d62;
 
 }

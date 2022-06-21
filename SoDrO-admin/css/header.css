@@ -37,7 +37,7 @@ header .logo {
 }
 
 #user-nav:hover {
-  color: #FF7426;
+  color: #588c7e;
 }
 
 .nav-links {
@@ -60,11 +60,11 @@ header .logo {
 }
 
 .nav-links li a:hover {
-  color: #FF7426;
+  color: #588c7e;
 }
 
 .nav-links li .active {
-  background-color: #FF7426;
+  background-color: #588c7e;
   border-radius: 50px;
   color: white;
   padding: 2px 10px;
