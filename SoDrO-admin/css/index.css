@@ -1,0 +1,81 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+  color: #588c7e;
+  font-family: monospace;
+  font-size: 25px;
+  text-align: left;
+}
+
+th {
+  background-color: #588c7e;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+
+.lower {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.users {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.newsletter {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.form-item {
+  display: flex;
+  width: 40%;
+  height: 50px;
+  background: transparent;
+  border-radius: 15px;
+  align-items: left;
+  border-bottom: 1px solid rgb(82, 81, 81);
+}
+
+.form-item:hover {
+  border: 1px solid rgb(82, 81, 81);
+}
+
+input[type=text] {
+  background-color: #c8d3b4;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+  font-family: 'Inter';
+  background: transparent;
+  width: 80%;
+  height: 20px;
+  outline: none;
+  border: none;
+  margin: auto;
+  color: black;
+  font-size: 16px;
+  text-align: left;
+}
+
+button[type=submit] {
+  font-family: "Inter";
+  width: 250px;
+  font-size: 30px;
+  margin: 10px auto;
+  padding: 10px;
+  background: rgb(10, 73, 22);
+  border: none;
+  color: white;
+  border-radius: 15px;
+}
+
+button[type=submit]:hover {
+  background-color: #692ccc;
+
+}

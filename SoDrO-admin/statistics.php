@@ -14,7 +14,7 @@
   <body>
     <?php include "./header-footer/header.php" ?>
     <div class="middle-container">
-
+    
     </div>
   </body>
 </html>
