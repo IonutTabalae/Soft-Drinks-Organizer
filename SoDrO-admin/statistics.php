@@ -71,13 +71,7 @@ new Chart(document.getElementById("bar-chart"), {
   </script>
     </div>
 <div class = "Users">
-  <style>
-  #bar-chart1 {
-    display: inline-block;
-    position: relative;
-    width: 5%;
-  }
-</style>
+  
     <canvas id="bar-chart1"></canvas>
 <script>
 new Chart(document.getElementById("bar-chart1"), {
@@ -87,7 +81,7 @@ new Chart(document.getElementById("bar-chart1"), {
     datasets: [
       {
         label: "Loggins",
-        backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
+        backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850", "#f5a947", "#86d630", "#52f0da", "#a68eea", "#9b104d"],
         data: <?php echo json_encode($dataUsers); ?>
       }
     ]

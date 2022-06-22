@@ -1,0 +1,16 @@
+.middle-container {
+  margin: 3%;
+  font-family: "Inter";
+}
+
+#bar-chart1 {
+  display: inline-block;
+  position: relative;
+  width: 5%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  margin-top: 100px;
+}
+
+#bar-chart {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
