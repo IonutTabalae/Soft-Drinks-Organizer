@@ -49,6 +49,10 @@ class Login extends Database {
       $_SESSION["email"]       = $user[0]["email"];
       $_SESSION["description"] = $user[0]["description"];
       $_SESSION["image"]       = $user[0]["image"];
+	  
+	  $stmt2 = $this->connect()->prepare('update users set loggedIn = loggedIn + 1 where id = ?');
+      $stmt2->execute(array( $_SESSION["userId"] ));
+	  $stmt2 = null;
      }
 
     $stmt = null;
