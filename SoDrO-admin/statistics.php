@@ -54,7 +54,7 @@ new Chart(document.getElementById("bar-chart"), {
     datasets: [
       {
         label: "Views",
-        backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
+        backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850", "#f5a947", "#86d630", "#52f0da", "#a68eea", "#9b104d"],
         data: <?php echo json_encode($dataProducts); ?>
       }
     ]
