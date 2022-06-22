@@ -41,7 +41,7 @@ $products = mysqli_fetch_all($result2, MYSQLI_ASSOC);
       <h1>Newsletter</h1>
         <table>
           <tr>
-            <th>Id</td>
+            <th>Id</th>
             <th>Email</th>
           </tr>
         <?php foreach ($emailNewsletter as $item): ?>
@@ -71,7 +71,7 @@ endforeach; ?>
       <h1>Users</h1>
         <table>
           <tr>
-            <th>Id</td>
+            <th>Id</th>
             <th>Username</th>
             <th>Email</th>
             <th>Description</th>
@@ -108,7 +108,7 @@ endforeach; ?>
           <h3>All Products</h3>
           <table>
           <tr>
-            <th>Id</td>
+            <th>Id</th>
             <th>Name</th>
             <th>Size</th>
             <th>Category</th>
