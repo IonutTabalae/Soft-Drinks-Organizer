@@ -1,5 +1,6 @@
 # Soft Drinks Organizer
 !SoftDrinkOrganizer HomePage
+![SoftDrinkOrganizer](HomePage.png)
 Proiect realizat de: Tabalae Ioan-Sebastian si Balteanu Andrei.
 \
 \
