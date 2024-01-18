@@ -1,4 +1,4 @@
-# Soft Drinks Organizer
+# Soft Drinks Organizer - Best place to find the drinks you want.
 ![SoftDrinkOrganizer](HomePage.png)
 Proiect realizat de: Tabalae Ioan-Sebastian si Balteanu Andrei.
 ## Overview
