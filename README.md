@@ -1,4 +1,4 @@
-# Soft Drinks Organizer🥤
+# Soft Drinks Organizer (SoDrO)🥤
 
 ![SoftDrinkOrganizer](HomePage.png)
 
