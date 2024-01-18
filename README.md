@@ -13,7 +13,21 @@ For populating the database, the data available freely at [Open Food Facts](http
 
 ## Features
 
-[Insert a list of features of your project here]
+Some of the most noticeable features of the **SoDrO** are:
+
+- **MVC Architecture:** The application follows the MVC (Model-View-Controller) architecture, ensuring efficient development and maintenance.
+- **Responsive Design:** The design is responsive and compatible with all devices, including desktops, tablets, and mobile phones.
+- **Admin Module:** The admin module allows for managing users, drinks, RSS feeds, accessing detailed statistics about website traffic and products, and managing newsletters.
+- **Advanced Product Search and Filtering:** Users can search for products and apply advanced filters for a better browsing experience.
+- **RSS Feed Integration:** The application integrates an RSS feed for updates and fetches news articles about soft drinks from external sources.
+- **Shopping List and Stats:** Logged-in users can manage their shopping list, view product stats, and export details about products and their shopping list.
+- **Validated HTML and CSS:** The application uses validated HTML and CSS files to ensure compliance with web standards and best practices.
+- **User Authentication and Session Management:** Users can create and manage their accounts, securely log in/out, and have personalized sessions.
+- **Administrator Control:** Administrators can modify the database by adding, deleting, and modifying products/users.
+- **Ranking System:** The application features a ranking system that showcases the most popular products based on views and user preferences.
+- **AJAX Integration:** The application uses AJAX for creating interactive web applications, improving the speed, performance, and usability.
+
+
 
 ## Tools & Technologies
 
