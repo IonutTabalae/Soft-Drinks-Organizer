@@ -16,6 +16,7 @@ For populating the database, the data available freely at [Open Food Facts](http
 Some of the most noticeable features of the **SoDrO** are:
 
 - **MVC Architecture:** The application follows the MVC (Model-View-Controller) architecture, ensuring efficient development and maintenance.
+- **Object-Oriented Programming Paradigms:** The application adheres to the principles of object-oriented programming, enhancing code readability and maintainability.
 - **Responsive Design:** The design is responsive and compatible with all devices, including desktops, tablets, and mobile phones.
 - **Admin Module:** The admin module allows for managing users, drinks, RSS feeds, accessing detailed statistics about website traffic and products, and managing newsletters.
 - **Advanced Product Search and Filtering:** Users can search for products and apply advanced filters for a better browsing experience.
