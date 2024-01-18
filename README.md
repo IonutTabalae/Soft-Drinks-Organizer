@@ -1,6 +1,8 @@
-# Soft Drinks Organizer 
+# Soft Drinks Organizer🥤
+
 ![SoftDrinkOrganizer](HomePage.png)
-Proiect realizat de: Tabalae Ioan-Sebastian si Balteanu Andrei.
+
+**SoftDrinksOrganizer** is a helpful website for soft drink lovers. We are your digital _encyclopedia_ on soft drinks.  You can discover a lot of great drinks sold on the entire globe. You can study their _ingredients_, _nutritional values_ and if you really like them you can add to your _shopping list_. Based on your activity we will try to give you the _best recommendation_.
 ## Overview
 
 [Insert a brief overview of your project here]
