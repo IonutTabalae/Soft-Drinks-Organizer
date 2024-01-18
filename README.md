@@ -49,7 +49,7 @@ This project is developed using the following technologies (***no frameworks wer
 
 ## Security
 
-[Insert information about the security measures taken in your project here]
+Implementarea va recurge la tehnici de prevenire a atacurilor (precum Cross Site Scripting sau SQL injection).
 
 ## Hosting
 
