@@ -8,7 +8,7 @@
   <summary><strong>Table of Contents</strong></summary>
 
 - [Overview](#overview)
-- [Key Features](#key--features)
+- [Key Features](#key-features)
 - [Tools & Technologies](#tools--technologies)
 - [Security](#security)
   - [Cross-Site Scripting (XSS) Prevention](#cross-site-scripting-xss-prevention)
