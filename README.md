@@ -192,5 +192,6 @@ SoftDrinksOrganizer is built with a responsive design to:
 
 Prioritizing design and responsiveness ensures a visually appealing, user-friendly experience for all soft drink enthusiasts.
 
-\
-Documentatie: https://ionuttabalae.github.io/Soft-Drinks-Organizer/
+---
+
+*Report in Scholarly HTML format:* https://ionuttabalae.github.io/Soft-Drinks-Organizer/
