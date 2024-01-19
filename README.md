@@ -4,6 +4,9 @@
 
 **SoftDrinksOrganizer** is a helpful website for soft drink lovers. We are your digital _encyclopedia_ on soft drinks.  You can discover a lot of great drinks sold on the entire globe. You can study their _ingredients_, _nutritional values_ and if you really like them you can add to your _shopping list_. Based on your activity we will try to give you the _best recommendation_.
 
+<details>
+  <summary><strong>Table of Contents</strong></summary>
+
 - [Overview](#overview)
 - [Features](#features)
 - [Tools & Technologies](#tools--technologies)
@@ -15,6 +18,8 @@
   - [Error Handling](#error-handling)
   - [Hosting Security with HTTPS and SSL Certificate](#hosting-security-with-https-and-ssl-certificate)
 - [License](#license)
+
+</details>
 
 # Overview
 
