@@ -8,6 +8,7 @@
   <summary><strong>Table of Contents</strong></summary>
 
 - [Overview](#overview)
+- [Architecture](#architecture)
 - [Features](#features)
 - [Tools & Technologies](#tools--technologies)
 - [Security](#security)
@@ -28,6 +29,19 @@
 The application also provides support for creating shopping lists, managing users and generating various statistics that can be exported in open formats, CSV and PDF. The application also creates an RSS data feed based on website changes like a new drink was added, a new drink is in top views. Furthermore an RSS news feed is feeded to the main page of the website to provide to the viewer the freshest news about soft drinks. This news articles are updated constantly.
 
 For populating the database, the data available freely at [Open Food Facts](https://world.openfoodfacts.org/) are used.
+
+# Architecture
+## Database Architecture
+
+[Here](https://dbdiagram.io/d/WEB-625543282514c97903159421) is the database design for SoftDrinksOrganizer (SoDrO):
+
+
+ <img src="/Documentatie/Scholarly%20HTML/diagrame/db.png" alt="Database Design" width="800">
+
+
+*The database is structured to store information about drinks, users, shopping lists, and other relevant data.*
+
+
 
 # Key Features
 
