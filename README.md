@@ -178,13 +178,5 @@ SoftDrinksOrganizer is built with a responsive design to:
 
 Prioritizing design and responsiveness ensures a visually appealing, user-friendly experience for all soft drink enthusiasts.
 
-
-# License
-
-[Insert license information for your project here]
-
-\
-\
-Design: https://www.figma.com/file/EPPpcE64S6aG270jEM1J7f/Soft-Drinks-Organizer?node-id=101%3A205 \
 \
 Documentatie: https://ionuttabalae.github.io/Soft-Drinks-Organizer/
