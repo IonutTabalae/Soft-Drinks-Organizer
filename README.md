@@ -37,12 +37,12 @@ This project is developed using the following technologies (***no frameworks wer
 
 
 
-- **HTML**, **CSS** and **JavaScript** for the frontend.
+- `HTML`, `CSS` and `JavaScript` for the frontend.
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/130px-HTML5_logo_and_wordmark.svg.png" alt="HTML5" height="100"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/120px-CSS3_logo_and_wordmark.svg.png" alt="CSS"  height="100">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png" alt="JavaScript" height="100">
 
-- **PHP** and **MySQL** for the backend.
+- **`PHP`** and **`MySQL`** for the backend.
 
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png" alt="PHP" height="100">
   <img src="https://upload.wikimedia.org/wikipedia/labs/8/8e/Mysql_logo.png" alt="MySQL" height="100">
@@ -51,7 +51,7 @@ This project is developed using the following technologies (***no frameworks wer
   
   <img src="https://avatars.githubusercontent.com/u/10342521?s=280&v=4" alt="Chart.js" height="100">
   
-- **XAMPP** and **phpMyAdmin** for creating a local web server and managing the MySQL database.
+- **`XAMPP`** and **`phpMyAdmin`** for creating a local web server and managing the **MySQL database**.
 
   <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/78/XAMPP_logo.svg/1200px-XAMPP_logo.svg.png" alt="XAMPP" height="100">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/PhpMyAdmin_logo.svg/2560px-PhpMyAdmin_logo.svg.png" alt="phpMyAdmin" height="100">
@@ -61,10 +61,69 @@ This project is developed using the following technologies (***no frameworks wer
 
   <img src="https://www.infinityfree.com/images/logo-purple.png" alt="InfinityFree Logo" width="100">
 
-
 ## Security
 
-Implementarea va recurge la tehnici de prevenire a atacurilor (precum Cross Site Scripting sau SQL injection).
+### Cross-Site Scripting (XSS) Prevention
+
+1. **Input Validation**
+   - Validated and sanitized all user inputs on both the client and server sides.
+   - Utilized validation libraries and built-in functions to ensure that user input matched the expected format.
+
+2. **Output Encoding**
+   - Before echoing user input back to the browser, used output encoding functions like `htmlspecialchars()` or `htmlentities()` to convert special characters into their respective HTML entities.
+   - Exercised caution when using `innerHTML` or similar methods in JavaScript.
+
+3. **HTTP Only Cookies**
+   - Set the "HttpOnly" flag on cookies to prevent them from being accessed through JavaScript, reducing the risk of session theft.
+
+### SQL Injection Prevention
+
+1. **Prepared Statements**
+   - Implemented parameterized queries or prepared statements with placeholders when interacting with databases, separating SQL code from user input.
+     ```php
+     $stmt = $pdo->prepare("SELECT * FROM users WHERE username = :username");
+     $stmt->bindParam(':username', $username);
+     $stmt->execute();
+     ```
+
+2. **Escaping Input**
+   - If dynamic SQL queries were necessary, properly escaped and sanitized user inputs using functions like `mysqli_real_escape_string()`.
+     ```php
+     $username = mysqli_real_escape_string($conn, $username);
+     $query = "SELECT * FROM users WHERE username = '$username'";
+     ```
+
+3. **Least Privilege Principle**
+   - Used database accounts with the least privilege necessary, avoiding the use of accounts with administrative privileges for normal application operations.
+
+4. **Database Connection Parameters**
+   - Avoided using a database user with excessive permissions, limiting the user's access to only the necessary databases and tables.
+
+5. **Error Handling**
+   - Customized error messages for database errors to avoid exposing sensitive information.
+   - Logged detailed errors to help developers identify and fix issues without exposing them to attackers.
+     
+### Password Hashing
+
+   - Stored user passwords securely by hashing them using the `password_hash()` function with the **bcrypt algorithm**.
+     ```php
+     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+     ```
+
+   - Verified user passwords using the `password_verify()` function during login.
+   
+   - Utilized the default hashing algorithm provided by `PASSWORD_DEFAULT`, which includes the **bcrypt algorithm** with a **unique salt** for each password.
+
+### File Upload Security
+
+- Implemented file upload security measures, including validation and sanitization of file types.
+- Set file size limits for uploaded files.
+- Stored uploaded files outside the web root to prevent direct access.
+
+### Error Handling
+
+- Customized error messages for database errors to avoid exposing sensitive information.
+- Logged detailed errors to help developers identify and fix issues without exposing them to attackers.
 
 ## Hosting
 
