@@ -29,7 +29,7 @@ The application also provides support for creating shopping lists, managing user
 
 For populating the database, the data available freely at [Open Food Facts](https://world.openfoodfacts.org/) are used.
 
-# Features
+# Key Features
 
 Some of the most noticeable features of the **SoDrO** are:
 
@@ -75,9 +75,12 @@ This project is developed using the following technologies (***no frameworks wer
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/PhpMyAdmin_logo.svg/2560px-PhpMyAdmin_logo.svg.png" alt="phpMyAdmin" height="100">
     
 - [**InfinityFree**](https://www.infinityfree.com/) for hosting the web application online.
-
-
+  
   <img src="https://www.infinityfree.com/images/logo-purple.png" alt="InfinityFree Logo" width="100">
+
+- [**Figma**](https://www.figma.com/) for the beautiful and accesible design of the aplication.
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1667px-Figma-logo.svg.png" alt="Figma Logo" height="100">
 
 # Security
 
@@ -149,6 +152,31 @@ This project is developed using the following technologies (***no frameworks wer
 - Obtained and installed an SSL certificate issued by ZeroSSL to authenticate and secure the connection.
 - Ensured all pages, including login and sensitive areas, are served over HTTPS.
 - Regularly updated SSL certificates to prevent security vulnerabilities.
+
+# Design
+SoftDrinksOrganizer (SoDrO) has been meticulously designed using [Figma](https://www.figma.com/), a collaborative design tool that enables teams to create, test, and iterate on design concepts. Figma allows designers, developers, and stakeholders to work together in real-time, fostering collaboration and ensuring a unified vision for the project.
+
+[Figma Design](https://www.figma.com/file/EPPpcE64S6aG270jEM1J7f/Soft-Drinks-Organizer?node-id=101%3A205) - Explore the detailed design of SoftDrinksOrganizer.
+
+### Importance of Design
+
+Well-crafted design in SoftDrinksOrganizer is essential for:
+
+- **User Engagement:** Captures attention and encourages interaction.
+- **Brand Representation:** Reflects the identity and visual appeal.
+- **Usability:** Enhances the overall user experience.
+- **Accessibility:** Ensures inclusivity for all users.
+
+### Responsiveness
+
+SoftDrinksOrganizer is built with a responsive design to:
+
+- **Cross-Device Compatibility:** Seamlessly accessible on desktops, tablets, and smartphones.
+- **Improved SEO:** Enhances search engine optimization.
+- **User Satisfaction:** Provides a consistent experience across devices.
+- **Adaptability:** Easily adjusts to new devices and screen sizes.
+
+Prioritizing design and responsiveness ensures a visually appealing, user-friendly experience for all soft drink enthusiasts.
 
 
 # License
