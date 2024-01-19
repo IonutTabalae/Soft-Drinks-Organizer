@@ -127,7 +127,13 @@ This project is developed using the following technologies (***no frameworks wer
 
 ## Hosting
 
-[Insert information about the hosting provider used for your project here]
+### Hosting Security with HTTPS and SSL Certificate
+
+- Configured the web server to use HTTPS to encrypt data in transit.
+- Obtained and installed an SSL certificate issued by ZeroSSL to authenticate and secure the connection.
+- Ensured all pages, including login and sensitive areas, are served over HTTPS.
+- Regularly updated SSL certificates to prevent security vulnerabilities.
+
 
 ## License
 
