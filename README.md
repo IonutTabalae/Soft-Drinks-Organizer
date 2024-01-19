@@ -8,8 +8,7 @@
   <summary><strong>Table of Contents</strong></summary>
 
 - [Overview](#overview)
-- [Architecture](#architecture)
-- [Features](#features)
+- [Key Features](#key--features)
 - [Tools & Technologies](#tools--technologies)
 - [Security](#security)
   - [Cross-Site Scripting (XSS) Prevention](#cross-site-scripting-xss-prevention)
@@ -30,19 +29,6 @@ The application also provides support for creating shopping lists, managing user
 
 For populating the database, the data available freely at [Open Food Facts](https://world.openfoodfacts.org/) are used.
 
-# Architecture
-## Database Architecture
-
-[Here](https://dbdiagram.io/d/WEB-625543282514c97903159421) is the database design for SoftDrinksOrganizer (SoDrO):
-
-
- <img src="/Documentatie/Scholarly%20HTML/diagrame/db.png" alt="Database Design" width="800">
-
-
-*The database is structured to store information about drinks, users, shopping lists, and other relevant data.*
-
-
-
 # Key Features
 
 Some of the most noticeable features of the **SoDrO** are:
@@ -59,6 +45,7 @@ Some of the most noticeable features of the **SoDrO** are:
 - **Administrator Control:** Administrators can modify the database by adding, deleting, and modifying products/users.
 - **Ranking System:** The application features a ranking system that showcases the most popular products based on views and user preferences.
 - **AJAX Integration:** The application uses AJAX for creating interactive web applications, improving the speed, performance, and usability.
+- **Normalized Database without Redundancies:** The database is designed with normalization principles, eliminating redundancies and ensuring efficient storage of data. [Database design](https://dbdiagram.io/d/WEB-625543282514c97903159421).
 
 
 
