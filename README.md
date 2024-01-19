@@ -17,7 +17,7 @@
   - [File Upload Security](#file-upload-security)
   - [Error Handling](#error-handling)
   - [Hosting Security with HTTPS and SSL Certificate](#hosting-security-with-https-and-ssl-certificate)
-- [License](#license)
+- [Design](#design)
 
 </details>
 
