@@ -3,7 +3,20 @@
 ![SoftDrinkOrganizer](HomePage.png)
 
 **SoftDrinksOrganizer** is a helpful website for soft drink lovers. We are your digital _encyclopedia_ on soft drinks.  You can discover a lot of great drinks sold on the entire globe. You can study their _ingredients_, _nutritional values_ and if you really like them you can add to your _shopping list_. Based on your activity we will try to give you the _best recommendation_.
-## Overview
+
+- [Overview](#overview)
+- [Features](#features)
+- [Tools & Technologies](#tools--technologies)
+- [Security](#security)
+  - [Cross-Site Scripting (XSS) Prevention](#cross-site-scripting-xss-prevention)
+  - [SQL Injection Prevention](#sql-injection-prevention)
+  - [Password Hashing](#password-hashing)
+  - [File Upload Security](#file-upload-security)
+  - [Error Handling](#error-handling)
+  - [Hosting Security with HTTPS and SSL Certificate](#hosting-security-with-https-and-ssl-certificate)
+- [License](#license)
+
+# Overview
 
 **SoDrO**  web application that manages the preferences of a person regarding the consumption of non-alcoholic drinks (teas, dairy products, juices, syrups, etc.). The application allows users to view, add, modify and delete drinks from the database, as well as to filter drinks by category, price, ingredients, images and availability according to the geographical region. 
 
@@ -11,7 +24,7 @@ The application also provides support for creating shopping lists, managing user
 
 For populating the database, the data available freely at [Open Food Facts](https://world.openfoodfacts.org/) are used.
 
-## Features
+# Features
 
 Some of the most noticeable features of the **SoDrO** are:
 
@@ -30,7 +43,7 @@ Some of the most noticeable features of the **SoDrO** are:
 
 
 
-## Tools & Technologies
+# Tools & Technologies
 
 This project is developed using the following technologies (***no frameworks were used***):
 
@@ -61,9 +74,9 @@ This project is developed using the following technologies (***no frameworks wer
 
   <img src="https://www.infinityfree.com/images/logo-purple.png" alt="InfinityFree Logo" width="100">
 
-## Security
+# Security
 
-### Cross-Site Scripting (XSS) Prevention
+## Cross-Site Scripting (XSS) Prevention
 
 1. **Input Validation**
    - Validated and sanitized all user inputs on both the client and server sides.
@@ -76,7 +89,7 @@ This project is developed using the following technologies (***no frameworks wer
 3. **HTTP Only Cookies**
    - Set the "HttpOnly" flag on cookies to prevent them from being accessed through JavaScript, reducing the risk of session theft.
 
-### SQL Injection Prevention
+## SQL Injection Prevention
 
 1. **Prepared Statements**
    - Implemented parameterized queries or prepared statements with placeholders when interacting with databases, separating SQL code from user input.
@@ -103,7 +116,7 @@ This project is developed using the following technologies (***no frameworks wer
    - Customized error messages for database errors to avoid exposing sensitive information.
    - Logged detailed errors to help developers identify and fix issues without exposing them to attackers.
      
-### Password Hashing
+## Password Hashing
 
    - Stored user passwords securely by hashing them using the `password_hash()` function with the **bcrypt algorithm**.
      ```php
@@ -114,20 +127,18 @@ This project is developed using the following technologies (***no frameworks wer
    
    - Utilized the default hashing algorithm provided by `PASSWORD_DEFAULT`, which includes the **bcrypt algorithm** with a **unique salt** for each password.
 
-### File Upload Security
+## File Upload Security
 
 - Implemented file upload security measures, including validation and sanitization of file types.
 - Set file size limits for uploaded files.
 - Stored uploaded files outside the web root to prevent direct access.
 
-### Error Handling
+## Error Handling
 
 - Customized error messages for database errors to avoid exposing sensitive information.
 - Logged detailed errors to help developers identify and fix issues without exposing them to attackers.
 
-## Hosting
-
-### Hosting Security with HTTPS and SSL Certificate
+## Hosting Security with HTTPS and SSL Certificate
 
 - Configured the web server to use HTTPS to encrypt data in transit.
 - Obtained and installed an SSL certificate issued by ZeroSSL to authenticate and secure the connection.
@@ -135,7 +146,7 @@ This project is developed using the following technologies (***no frameworks wer
 - Regularly updated SSL certificates to prevent security vulnerabilities.
 
 
-## License
+# License
 
 [Insert license information for your project here]
 
